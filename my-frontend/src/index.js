@@ -4,11 +4,10 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 // styles for this kit
 import "assets/css/bootstrap.min.css";
-import "assets/scss/now-ui-kit.scss?v=1.4.0";
-import "assets/css/now-ui-kit.css";
-import "assets/demo/demo.css?v=1.4.0";
-import "assets/demo/nucleo-icons-page-styles.css?v=1.4.0";
+//import "assets/scss/now-ui-kit.scss?v=1.4.0";
+import "assets/css/template.css";
 import "assets/css/style.css";
+
 // pages for this kit
 import Home from "pages/Home.js";
 import Vehicles from "pages/Vehicles.js";

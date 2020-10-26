@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Map = (props) => (
-        <div className="google-map">
+        <div className={props.mini ? "google-map-mini" : "google-map" } >
         <LoadScript>
             <GoogleMap
                 mapContainerStyle={{height: "100%", width: "100%"}}

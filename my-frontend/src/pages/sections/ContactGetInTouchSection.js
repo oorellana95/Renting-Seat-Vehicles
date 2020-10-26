@@ -1,8 +1,7 @@
 
 import React from 'react'
-import Map from 'components/Map';
 import ItemContact from 'components/ItemContact';
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, FormGroup, Form, Input, Button} from "reactstrap";
 import { faBuilding, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 function GetInTouchSection() {
@@ -35,44 +34,44 @@ function GetInTouchSection() {
             <div className="site-section bg-light">
                 <Container>
                     <Row>
-                        <Col md={6} className="mb-3 section-heading">
+                        <Col md={6} className="section-heading">
                             <h3 className="mb-5 font-weight-bold">Get In Touch</h3>
                         </Col>
                     </Row>
                     <Row>
                         <Col lg={8}>
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder="Enter Message" ></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name"></input>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Enter email address"></input>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject"></input>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
-                            </div>
-                        </form>
+                            <Form className="form-contact contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
+                                <Row>
+                                    <Col xs={12}>
+                                        <FormGroup className="form-group">
+                                            <textarea className="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder="Enter Message" ></textarea>
+                                        </FormGroup>
+                                    </Col>
+                                    <Col sm={6}>
+                                        <FormGroup className="form-group">
+                                            <Input className="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name"></Input>
+                                        </FormGroup>
+                                    </Col>
+                                    <Col sm={6}>
+                                        <FormGroup className="form-group">
+                                            <Input className="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Enter email address"></Input>
+                                        </FormGroup>
+                                    </Col>
+                                    <Col xs={12}>
+                                        <FormGroup className="form-group">
+                                            <Input className="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject"></Input>
+                                        </FormGroup>
+                                    </Col>
+                                </Row>
+                                <FormGroup className="form-group mt-3">
+                                    <Button type="submit" className="button button-contactForm boxed-btn">Send</Button>
+                                </FormGroup>
+                            </Form>
                         </Col>
-                        <Col md={4} className="mt-3" >
+                        <Col lg={4} className="mt-3" >
                             {itemsContact.map(item => {
                                 return (
-                                    <ItemContact name={item.name} description={item.description} icon={item.icon}/>
+                                    <ItemContact name={item.name} description={item.description} icon={item.icon} />
                                 )
                             })}
                         </Col>

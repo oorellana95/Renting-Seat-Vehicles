@@ -28,7 +28,7 @@ function ContactMapSection() {
         <>
             <div className="site-section">
                 <Container>
-                    <Map markers={markers} defaultCenter={defaultCenter} zoom={10} /> {/* include it here */}
+                    <Map markers={markers} defaultCenter={defaultCenter} zoom={10} mini={false}/> {/* include it here */}
                 </Container>
             </div>
         </>

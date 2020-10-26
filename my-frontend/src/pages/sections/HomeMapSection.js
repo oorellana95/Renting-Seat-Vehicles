@@ -50,9 +50,9 @@ function MapSection() {
                     </Row>
                     <Row>
                         <Col lg={8}>
-                            <Map markers={markers} defaultCenter={defaultCenter} zoom={10} /> {/* include it here */}
+                            <Map markers={markers} defaultCenter={defaultCenter} zoom={10} mini={true}/> {/* include it here */}
                         </Col>
-                        <Col md={3} className="mt-3" >
+                        <Col lg={3} className="mt-3" >
                             {itemsContact.map(item => {
                                 return (
                                     <ItemContact name={item.name} description={item.description} icon={item.icon}/>
