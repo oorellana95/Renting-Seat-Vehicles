@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import {store, persistor} from './store/store' 
 
 // styles for this kit
 import "assets/css/bootstrap.min.css";
-//import "assets/scss/now-ui-kit.scss?v=1.4.0";
 import "assets/css/template.css";
 import "assets/css/style.css";
 
@@ -16,27 +18,31 @@ import Contact from "pages/Contact.js";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route 
-          path="/home" 
-          render={(props) => <Home {...props} />} />
-        <Route
-          path="/vehicles"
-          render={(props) => <Vehicles {...props} />}
-        />
-        <Route
-          path="/about"
-          render={(props) => <About {...props} />}
-        />
-        <Route
-          path="/contact"
-          render={(props) => <Contact {...props} />}
-        />
-        <Redirect to="/home" />
-        <Redirect from="/" to="/home" />
-      </Switch>
-    </BrowserRouter>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <Switch>
+            <Route
+              path="/home"
+              render={(props) => <Home {...props} />} />
+            <Route
+              path="/vehicles"
+              render={(props) => <Vehicles {...props} />}
+            />
+            <Route
+              path="/about"
+              render={(props) => <About {...props} />}
+            />
+            <Route
+              path="/contact"
+              render={(props) => <Contact {...props} />}
+            />
+            <Redirect to="/home" />
+            <Redirect from="/" to="/home" />
+          </Switch>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
