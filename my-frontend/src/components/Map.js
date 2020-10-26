@@ -1,0 +1,25 @@
+import React from 'react'
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+
+const Map = (props) => (
+        <div className="google-map">
+        <LoadScript>
+            <GoogleMap
+                mapContainerStyle={{height: "100%", width: "100%"}}
+                zoom={props.zoom}
+                center={props.defaultCenter}>
+                {
+                    props.markers.map(item => {
+                        return (
+                        <Marker key={item.name} position={item.location}/>
+                        )
+                      })
+                }
+            </GoogleMap>
+        </LoadScript>
+        </div>
+)
+
+export default Map;
