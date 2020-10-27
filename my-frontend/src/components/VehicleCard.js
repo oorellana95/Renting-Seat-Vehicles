@@ -30,8 +30,6 @@ function VehicleCard(props) {
                         </Col>
                     </Row>
                 </div>
-                
-                
             </article>
         </>
     );
