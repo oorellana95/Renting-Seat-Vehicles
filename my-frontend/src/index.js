@@ -3,12 +3,14 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import {store, persistor} from './store/store' 
+import {store, persistor} from './store/store'
+
 
 // styles for this kit
 import "assets/css/bootstrap.min.css";
 import "assets/css/template.css";
 import "assets/css/style.css";
+import 'assets/css/sass.scss';
 
 // pages for this kit
 import Home from "pages/Home.js";

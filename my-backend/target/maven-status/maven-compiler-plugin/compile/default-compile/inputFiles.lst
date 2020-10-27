@@ -14,6 +14,7 @@ C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybacke
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\models\BookingsModel.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\services\VehiclesService.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\factories\FuelsourcesFactory.java
+C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\utils\bookingLogicalService.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\factories\MobilitytypesFactory.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\ui\securityhandlers\CustomAuthenticationSuccessHandler.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\domain\entities\VehiclesEntity.java
@@ -21,10 +22,12 @@ C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybacke
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\factories\LoginsFactory.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\ui\securityhandlers\CustomAuthenticationFailureHandler.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\models\LoginsModel.java
+C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\ui\controllers\MobilitytypesController.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\services\MobilitytypesService.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\ui\configuration\PasswordEnconderPlaintText.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\models\MobilitytypesModel.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\ui\configuration\UISecurityConfiguration.java
+C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\ui\controllers\BookingsController.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\domain\repositories\ClientRepository.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\services\BookingsServiceImplementation.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\domain\repositories\FuelsourcesRepository.java
@@ -32,6 +35,7 @@ C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybacke
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\services\FuelsourcesService.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\services\BookingsService.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\services\MobilitytypesServiceImplementation.java
+C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\ui\controllers\VehiclesController.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\domain\repositories\MobilitytypesRepository.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\domain\repositories\LoginRepository.java
 C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\models\ClientsModel.java

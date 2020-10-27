@@ -658,12 +658,13 @@ ul li{
   color: #000;
   border: 1px solid #000;
   text-transform: capitalize;
-  padding: 10px 25px
+  padding: 12px 27px
 }
 
 .book_now:hover {
-  background: #000;
-  color: #fff
+  background: #2c2c2c;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .vehicle_item {

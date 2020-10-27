@@ -1,32 +1,45 @@
 package com.mybackend.seat.ui.controllers;
 
 import com.mybackend.seat.application.models.MobilitytypesModel;
+import com.mybackend.seat.application.models.VehiclesModel;
 import com.mybackend.seat.application.services.FuelsourcesService;
 import com.mybackend.seat.application.services.MobilitytypesService;
+import com.mybackend.seat.application.services.VehiclesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@RequestMapping("/api")
 public class MainController {
 
-    //--- Services & Variables used ---------------------------------------
-    MobilitytypesService mobilitytypesService;
-    FuelsourcesService fuelsourcesService;
+    private static final String template = "Hello, %s";
+    private final AtomicLong counter = new AtomicLong();
 
-    //--- Constructor -----------------------------------------------------
-    @Autowired
-    public MainController(MobilitytypesService mobilitytypesService, FuelsourcesService fuelsourcesService) {
-        this.mobilitytypesService = mobilitytypesService;
-        this.fuelsourcesService = fuelsourcesService;
+    @GetMapping("/greeting")
+    public Greeting get(@RequestParam(value = "name", defaultValue = "world") String name) {
+        return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
-    //--- Mappings -----------------------------------------------------
-    @GetMapping("/mobilitytypes")
-    List<MobilitytypesModel> allMobilityTypes() {
-        return mobilitytypesService.findAll();
+    public class Greeting {
+        private final long id;
+        private final String content;
+
+        public Greeting (long id, String content){
+            this.id = id;
+            this.content = content;
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        public String getContent() {
+            return content;
+        }
     }
 
 }

@@ -17,8 +17,6 @@ class Vehicles extends React.Component {
   componentDidMount() {
     this.props.getVehicles();
     
-    console.log("Hola");
-    console.log(this.props);
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
