@@ -32,6 +32,14 @@ public class VehiclesEntity implements Serializable {
     @Column(name = "image", nullable = true)
     private String image;
 
+    @Basic
+    @Column(name = "passengers", nullable = true)
+    private int passengers;
+
+    @Basic
+    @Column(name = "gearbox", nullable = true)
+    private String gearbox;
+
     @ManyToOne
     @JoinColumn(name = "fk_mobilitytype_id", referencedColumnName = "id", table = "vehicles")
     private MobilitytypesEntity mobilityType;
@@ -91,6 +99,20 @@ public class VehiclesEntity implements Serializable {
     }
     public void setFuelSources(List<FuelsourcesEntity> fuelSources) {
         this.fuelSources = fuelSources;
+    }
+
+    public int getPassengers() {
+        return passengers;
+    }
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
+    }
+
+    public String getGearbox() {
+        return gearbox;
+    }
+    public void setGearbox(String gearbox) {
+        this.gearbox = gearbox;
     }
 
     //--- Some general functions -----------------------------------

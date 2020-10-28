@@ -28,5 +28,4 @@ public class BookingsController {
     public BookingsModel getBookingById(@PathVariable("id") long id) {
         return bookingsService.findById(id);
     }
-
 }

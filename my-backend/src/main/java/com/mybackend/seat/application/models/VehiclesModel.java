@@ -7,6 +7,8 @@ public class VehiclesModel {
     public String name;
     public String description;
     public Double pricePerDay;
+    public int passengers;
+    public String gearbox;
     public String image;
     public MobilitytypesModel mobilityType;
 
@@ -57,4 +59,17 @@ public class VehiclesModel {
         this.mobilityType = mobilityType;
     }
 
+    public int getPassengers() {
+        return passengers;
+    }
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
+    }
+
+    public String getGearbox() {
+        return gearbox;
+    }
+    public void setGearbox(String gearbox) {
+        this.gearbox = gearbox;
+    }
 }

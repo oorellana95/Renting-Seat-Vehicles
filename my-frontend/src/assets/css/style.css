@@ -1,15 +1,15 @@
 #copyright a {
-  color: #f96332;
+  color: #009DFF;
 }
 
 ul {
   padding-inline-start: 0em;
 }
 
-ul li{
+ul li {
   list-style-type: none;
-  
 }
+
 .line-button {
   color: #919191;
   font-size: 16px;
@@ -104,10 +104,10 @@ ul li{
   background-color: #452B71 !important;
 }
 
-
 .site-section.first {
   padding: 10em 0;
 }
+
 .site-section {
   padding: 7em 0;
 }
@@ -375,6 +375,7 @@ ul li{
 }
 
 /* */
+
 .media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,20 +386,24 @@ ul li{
   margin-top: 1rem;
   margin-left: 1.5rem;
 }
+
 .contact-info .media-body h3 {
   font-size: 16px;
   margin-bottom: 0;
   font-size: 16px;
   color: #2a2a2a;
 }
+
 .contact-info__icon {
   margin-right: 20px;
 }
+
 .media-body {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
+
 /* ---------------- Component: Google Maps  ---------------- */
 
 .google-map {
@@ -414,6 +419,7 @@ ul li{
     height: 55vh;
   }
 }
+
 /* ------------------- ABOUT: Staff Section ------------------ */
 
 .section-heading h2 {
@@ -499,10 +505,9 @@ ul li{
   transform: scale(1.05);
 }
 
-.container-iframe{
+.container-iframe {
   background-color: #000;
 }
-
 
 .form-contact .form-group {
   margin-bottom: 30px
@@ -531,7 +536,7 @@ ul li{
   height: 100% !important
 }
 
-.form-group Button{
+.form-group Button {
   border-radius: 0px;
 }
 
@@ -661,6 +666,14 @@ ul li{
   padding: 12px 27px
 }
 
+.price {
+  display: inline-block;
+  font-size: 18px;
+  color: #000;
+  text-transform: capitalize;
+  padding: 8px 0px
+}
+
 .book_now:hover {
   background: #2c2c2c;
   color: #fff !important;
@@ -678,7 +691,7 @@ ul li{
 
 @media (min-width: 768px) {
   .vehicle_details {
-      padding: 60px 30px 35px 35px
+    padding: 60px 30px 35px 35px
   }
 }
 
@@ -691,7 +704,8 @@ ul li{
 }
 
 .vehicle_details a:hover {
-  color: #009DFF
+  color: #009DFF;
+  text-decoration: none
 }
 
 .vehicle_details h2 {
@@ -702,8 +716,8 @@ ul li{
 
 @media (min-width: 768px) {
   .vehicle_details h2 {
-      font-size: 24px;
-      margin-bottom: 15px
+    font-size: 24px;
+    margin-bottom: 15px
   }
 }
 
@@ -755,9 +769,9 @@ ul li{
 
 @media (min-width: 768px) {
   .vehicle_item_img .vehicle_item_date {
-      bottom: -20px;
-      left: 40px;
-      padding: 13px 30px
+    bottom: -20px;
+    left: 40px;
+    padding: 13px 30px
   }
 }
 
@@ -771,7 +785,7 @@ ul li{
 
 @media (min-width: 768px) {
   .vehicle_item_img .vehicle_item_date h3 {
-      font-size: 30px
+    font-size: 30px
   }
 }
 
@@ -783,6 +797,337 @@ ul li{
 
 @media (min-width: 768px) {
   .vehicle_item_img .vehicle_item_date p {
-      font-size: 18px
+    font-size: 18px
   }
+}
+
+/* Blog Right Sidebar */
+
+.blog_right_sidebar .single_sidebar_widget {
+  background: #fbf9ff;
+  padding: 30px;
+  margin-bottom: 30px
+}
+
+.blog_right_sidebar .widget_title {
+  margin-top: 0px;
+}
+
+.blog_right_sidebar .widget_title::after {
+  content: "";
+  display: block;
+  padding-top: 15px;
+  border-bottom: 1px solid #f0e9ff;
+}
+
+.blog_right_sidebar .post_category_widget .cat-list li {
+  border-bottom: 1px solid #f0e9ff;
+  transition: all 0.3s ease 0s;
+  padding-bottom: 12px
+}
+
+.blog_right_sidebar .post_category_widget .cat-list li:last-child {
+  border-bottom: 0
+}
+
+.blog_right_sidebar .post_category_widget .cat-list li a {
+  font-size: 14px;
+  line-height: 20px;
+  color: #888888
+}
+
+.blog_right_sidebar .post_category_widget .cat-list li a:hover {
+  font-size: 14px;
+  line-height: 20px;
+  color: #007bff;
+  text-decoration: none
+}
+
+.blog_right_sidebar .post_category_widget .cat-list li a p {
+  margin-bottom: 0px
+}
+
+.blog_right_sidebar .post_category_widget .cat-list li+li {
+  padding-top: 15px
+}
+
+.default-select {
+  height: 40px
+}
+
+.default-select .nice-select {
+  border: none;
+  border-radius: 0px;
+  height: 40px;
+  background: #f9f9ff;
+  padding-left: 20px;
+  padding-right: 40px
+}
+
+.default-select .nice-select .list {
+  margin-top: 0;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  width: 100%;
+  padding: 10px 0 10px 0px
+}
+
+.default-select .nice-select .list .option {
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  line-height: 28px;
+  min-height: 28px;
+  font-size: 12px;
+  padding-left: 20px
+}
+
+.default-select .nice-select .list .option.selected {
+  color: #ff5e13;
+  background: transparent
+}
+
+.default-select .nice-select .list .option:hover {
+  color: #ff5e13;
+  background: transparent
+}
+
+.default-select .current {
+  margin-right: 50px;
+  font-weight: 300
+}
+
+.default-select .nice-select::after {
+  right: 20px
+}
+
+.form-select {
+  height: 40px;
+  width: 100%
+}
+
+.form-select .nice-select {
+  border: none;
+  border-radius: 0px;
+  height: 40px;
+  background: #f9f9ff;
+  padding-left: 45px;
+  padding-right: 40px;
+  width: 100%
+}
+
+.form-select .nice-select .list {
+  margin-top: 0;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  width: 100%;
+  padding: 10px 0 10px 0px
+}
+
+.form-select .nice-select .list .option {
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  line-height: 28px;
+  min-height: 28px;
+  font-size: 12px;
+  padding-left: 45px
+}
+
+.form-select .nice-select .list .option.selected {
+  color: #ff5e13;
+  background: transparent
+}
+
+.form-select .nice-select .list .option:hover {
+  color: #ff5e13;
+  background: transparent
+}
+
+.form-select .current {
+  margin-right: 50px;
+  font-weight: 300
+}
+
+.form-select .nice-select::after {
+  right: 20px
+}
+
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+}
+
+.nice-select:hover {
+  border-color: #dbdbdb;
+}
+
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color: #999;
+}
+
+.nice-select.disabled {
+  border-color: #ededed;
+  color: #999;
+  pointer-events: none;
+}
+
+.nice-select.disabled:after {
+  border-color: #cccccc;
+}
+
+.nice-select.wide {
+  width: 100%;
+}
+
+.nice-select.wide .list {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.nice-select.right {
+  float: right;
+}
+
+.nice-select.right .list {
+  left: auto;
+  right: 0;
+}
+
+.nice-select.small {
+  font-size: 12px;
+  height: 36px;
+  line-height: 34px;
+}
+
+.nice-select.small:after {
+  height: 4px;
+  width: 4px;
+}
+
+.nice-select.small .option {
+  line-height: 34px;
+  min-height: 34px;
+}
+
+.nice-select .list {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  box-sizing: border-box;
+  margin-top: 4px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(-21px);
+  -ms-transform: scale(0.75) translateY(-21px);
+  transform: scale(0.75) translateY(-21px);
+  -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+}
+
+.nice-select .list:hover .option:not(:hover) {
+  background-color: transparent !important;
+}
+
+.nice-select .option {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  text-align: left;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+  background-color: #f6f6f6;
+}
+
+.nice-select .option.selected {
+  font-weight: bold;
+}
+
+.nice-select .option.disabled {
+  background-color: transparent;
+  color: #999;
+  cursor: default;
+}
+
+.no-csspointerevents .nice-select .list {
+  display: none;
+}
+
+.no-csspointerevents .nice-select.open .list {
+  display: block;
+}
+
+/* ,,,,,,,,,,,,,,,, */
+
+.nice-select:after {
+  content: "\e64b";
+  display: block;
+  height: 5px;
+  margin-top: -5px;
+  pointer-events: none;
+  position: absolute;
+  right: 30px;
+  top: 8px;
+  transition: all 0.15s ease-in-out;
+  width: 5px;
+  font-family: 'themify';
+  color: #ddd;
+}
+
+.nice-select.open:after {}
+
+.nice-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale(1) translateY(0);
+  -ms-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
 }

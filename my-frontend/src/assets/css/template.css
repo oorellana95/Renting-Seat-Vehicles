@@ -2377,7 +2377,7 @@ textarea.form-control:focus, textarea.form-control:active {
   border-color: #FFFFFF;
   background-color: #FFFFFF;
   color: #FFFFFF;
-}
+}*/
 
 .pagination .page-item .page-link {
   border: 0;
@@ -2476,7 +2476,7 @@ textarea.form-control:focus, textarea.form-control:active {
   display: flex;
   align-items: center;
 }
-*/
+
 button, input, optgroup, select, textarea {
   font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }

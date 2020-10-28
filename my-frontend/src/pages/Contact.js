@@ -8,7 +8,6 @@ import GetInTouchSection from './sections/ContactGetInTouchSection';
 
 //Diferentes formas de crear componentes
 function Contact () {
-  
   React.useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");

@@ -26,6 +26,8 @@ public class VehiclesFactory {
         entity.setDescription(model.description);
         entity.setPricePerDay(model.pricePerDay);
         entity.setImage(model.image);
+        entity.setGearbox(model.gearbox);
+        entity.setPassengers(model.passengers);
         entity.setMobilityType(mobilitytypesFactory.createEntity(model.mobilityType));
         return entity;
     }
@@ -37,6 +39,8 @@ public class VehiclesFactory {
         model.description = entity.getDescription();
         model.pricePerDay = entity.getPricePerDay();
         model.image = entity.getImage();
+        model.passengers = entity.getPassengers();
+        model.gearbox = entity.getGearbox();
         model.mobilityType = mobilitytypesFactory.createModel(entity.getMobilityType());
         return model;
     }

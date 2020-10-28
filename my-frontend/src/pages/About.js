@@ -10,7 +10,6 @@ import AboutBettingSection from './sections/AboutBettingSection';
 import MoSection from './sections/MoSection';
 
 function About () {
-  
   React.useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");

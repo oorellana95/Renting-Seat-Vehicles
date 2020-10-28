@@ -1,3 +1,4 @@
 {
-    "vehiclesEndpoint": "http://localhost:8080/api/vehicles"
+    "vehiclesEndpoint": "http://localhost:8080/api/vehicles",
+    "mobilityTypesEndpoint": "http://localhost:8080/api/mobilitytypes"
 }
