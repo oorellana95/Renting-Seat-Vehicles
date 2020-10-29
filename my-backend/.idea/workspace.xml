@@ -20,41 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cd44f2f-a731-4cf0-9d55-d8c019a11e2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/configuration/MyConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_3_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_3_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/my-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/VehiclesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/VehiclesEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/VehiclesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/VehiclesFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/VehiclesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/VehiclesModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/configuration/PasswordEnconderPlaintText.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/configuration/UISecurityConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/BookingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/securityhandlers/CustomAuthenticationFailureHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/securityhandlers/CustomAuthenticationSuccessHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/VehiclesEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/VehiclesEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/VehiclesFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/VehiclesFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/VehiclesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/VehiclesModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/assets/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/assets/css/template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/assets/img/vehicles-for-rent/seat-ibiza.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/assets/img/vehicles-for-rent/seat-mi-electric.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/assets/img/vehicles-for-rent/seat-nuevo-leon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/components/VehicleCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/components/VehicleCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/pages/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/pages/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/pages/Contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-frontend/src/pages/Vehicles.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/pages/Vehicles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +154,7 @@
       <updated>1603786830443</updated>
       <workItem from="1603786834645" duration="7699000" />
       <workItem from="1603798073868" duration="84000" />
-      <workItem from="1603816363218" duration="8991000" />
+      <workItem from="1603816363218" duration="9198000" />
     </task>
     <servers />
   </component>
@@ -237,49 +203,49 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603787768461" />
-    <state width="845" height="300" key="GridCell.Tab.0.bottom" timestamp="1603817320643">
+    <state width="845" height="300" key="GridCell.Tab.0.bottom" timestamp="1603899231017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="147" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852011" />
-    <state width="845" height="300" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768210" />
+    <state width="845" height="300" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="845" height="300" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603817320643" />
-    <state width="845" height="300" key="GridCell.Tab.0.center" timestamp="1603817320643">
+    <state width="845" height="300" key="GridCell.Tab.0.center" timestamp="1603899231017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="147" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852011" />
-    <state width="845" height="300" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768210" />
+    <state width="845" height="300" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="845" height="300" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603817320643" />
-    <state width="845" height="300" key="GridCell.Tab.0.left" timestamp="1603817320642">
+    <state width="845" height="300" key="GridCell.Tab.0.left" timestamp="1603899231016">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="147" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852009" />
-    <state width="845" height="300" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768210" />
+    <state width="845" height="300" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231016" />
     <state width="845" height="300" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603817320642" />
-    <state width="845" height="300" key="GridCell.Tab.0.right" timestamp="1603817320643">
+    <state width="845" height="300" key="GridCell.Tab.0.right" timestamp="1603899231017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="147" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852011" />
-    <state width="845" height="300" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768210" />
+    <state width="845" height="300" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="845" height="300" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603817320643" />
-    <state width="845" height="300" key="GridCell.Tab.1.bottom" timestamp="1603817320645">
+    <state width="845" height="300" key="GridCell.Tab.1.bottom" timestamp="1603899231018">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="300" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768211" />
+    <state width="845" height="300" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231018" />
     <state width="845" height="300" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603817320645" />
-    <state width="845" height="300" key="GridCell.Tab.1.center" timestamp="1603817320644">
+    <state width="845" height="300" key="GridCell.Tab.1.center" timestamp="1603899231018">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="300" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768211" />
+    <state width="845" height="300" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231018" />
     <state width="845" height="300" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603817320644" />
-    <state width="845" height="300" key="GridCell.Tab.1.left" timestamp="1603817320644">
+    <state width="845" height="300" key="GridCell.Tab.1.left" timestamp="1603899231017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="300" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768210" />
+    <state width="845" height="300" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="845" height="300" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603817320644" />
-    <state width="845" height="300" key="GridCell.Tab.1.right" timestamp="1603817320645">
+    <state width="845" height="300" key="GridCell.Tab.1.right" timestamp="1603899231018">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="300" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603797768211" />
+    <state width="845" height="300" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231018" />
     <state width="845" height="300" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603817320645" />
     <state x="321" y="23" key="spring file set editor" timestamp="1603701222348">
       <screen x="0" y="0" width="1280" height="680" />

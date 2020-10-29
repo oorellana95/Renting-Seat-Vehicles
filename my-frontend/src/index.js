@@ -17,6 +17,7 @@ import Home from "pages/Home.js";
 import Vehicles from "pages/Vehicles.js";
 import About from "pages/About.js";
 import Contact from "pages/Contact.js";
+import DetailsVehicle from "pages/DetailsVehicle.js";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -38,6 +39,10 @@ ReactDOM.render(
             <Route
               path="/contact"
               render={(props) => <Contact {...props} />}
+            />
+            <Route
+              path="/detail"
+              render={(props) => <DetailsVehicle {...props} />}
             />
             <Redirect to="/home" />
             <Redirect from="/" to="/home" />

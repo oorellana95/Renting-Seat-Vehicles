@@ -52,7 +52,7 @@ class Vehicles extends React.Component {
         <MyNavbar navbarSolidColor="grey" />
         <div className="wrapper">
           <Header routeImage={require("assets/img/vehicles-header.jpg")} title="Our vehicles" description="Choose the one that fits you" filterColor="blue" />
-          <div className="site-section">
+          <div className="site-section first">
             <Container>
               <Row>
                 <Col lg={8}>
