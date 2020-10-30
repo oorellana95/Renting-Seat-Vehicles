@@ -81,19 +81,5 @@ const mapDispatchToProps = dispatch => ({
   getVehicles: () => dispatch(fetchVehicles()),
   getMobilityTypes: () => dispatch(fetchMobilityTypes()),
 })
-/*
- Mapeamos los disparadores de las acciones del ActionCreators que queremos usar en este componente y las metemos
-// en las props
-// recibimo el disparador de nuestro almacen
-const mapDispatchToProps = (dispatch) => ({
-  postComment: (dishId, rating, author, comment) => dispatch(postComment(dishId, rating, author, comment)),
-  fetchDishes: () => { dispatch(fetchDishes())},
-  resetFeedbackForm: () => { dispatch(actions.reset(‘feedback’))}, //reset del form feedback
-  fetchComments: () => dispatch(fetchComments()), //disparadores para obtener datos del servidor
-  fetchPromos: () => dispatch(fetchPromos()),
-  fetchLeaders: () => dispatch(fetchLeaders()),
-  postFeedback: (firstname, lastname, telnum, email, agree, contactType, message, postId) => dispatch(postFeedback(firstname, lastname, telnum, email, agree, contactType, message, postId))
-});
-*/
 
 export default connect(mapStateToProps, mapDispatchToProps)(Vehicles)

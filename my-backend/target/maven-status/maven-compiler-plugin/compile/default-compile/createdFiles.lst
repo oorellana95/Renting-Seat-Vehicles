@@ -3,11 +3,16 @@ com\mybackend\seat\application\domain\entities\BookingsEntity.class
 com\mybackend\seat\application\domain\entities\LoginsEntity.class
 com\mybackend\seat\application\factories\FuelsourcesFactory.class
 com\mybackend\seat\application\services\ClientLoginService.class
+com\mybackend\seat\ui\controllers\VehiclesController.class
 com\mybackend\seat\application\factories\MobilitytypesFactory.class
+com\mybackend\seat\ui\controllers\BookingsController.class
+com\mybackend\seat\ui\controllers\PricesController.class
 com\mybackend\seat\application\models\LoginsModel.class
+com\mybackend\seat\ui\dto\BookingsDTO.class
 com\mybackend\seat\application\domain\repositories\ClientLoginRepository.class
 com\mybackend\seat\application\services\BookingsServiceImplementation.class
 com\mybackend\seat\application\factories\BookingsFactory.class
+com\mybackend\seat\utils\PricesUtilImplementation.class
 com\mybackend\seat\application\domain\repositories\LoginRepository.class
 com\mybackend\seat\application\domain\repositories\ClientLoginRepositoryImplementation.class
 com\mybackend\seat\application\domain\entities\FuelsourcesEntity.class
@@ -15,6 +20,7 @@ com\mybackend\seat\application\domain\repositories\VehiclesRepository.class
 com\mybackend\seat\application\factories\ClientsFactory.class
 com\mybackend\seat\application\domain\entities\ClientsEntity.class
 com\mybackend\seat\application\models\BookingsModel.class
+com\mybackend\seat\ui\controllers\MobilitytypesController.class
 com\mybackend\seat\application\services\VehiclesService.class
 com\mybackend\seat\application\services\VehiclesServiceImplementation.class
 com\mybackend\seat\application\services\MobilitytypesService.class
@@ -24,6 +30,7 @@ com\mybackend\seat\application\services\ClientLoginServiceImplementation.class
 com\mybackend\seat\application\models\MobilitytypesModel.class
 com\mybackend\seat\application\domain\repositories\MobilitytypesRepository.class
 com\mybackend\seat\application\domain\entities\MobilitytypesEntity.class
+com\mybackend\seat\ui\controllers\MainController$Greeting.class
 com\mybackend\seat\application\services\MobilitytypesServiceImplementation.class
 com\mybackend\seat\ui\controllers\MainController.class
 com\mybackend\seat\application\models\ClientsModel.class

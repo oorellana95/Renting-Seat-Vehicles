@@ -2,11 +2,11 @@ import React from 'react';
 // core components
 import MyNavbar from "components/MyNavbar.js";
 import Footer from "components/Footer.js";
-import "react-datepicker/dist/react-datepicker.css";
-import ReactDatePicker from 'react-datepicker';
+import Header from "components/Header.js";
+import DetailsFormSection from './sections/DetailsFormSection';
 
 //Diferentes formas de crear componentes
-function Contact(props) {
+function DetailsVehicle(props) {
     let vehicle = props.history.location.state.vehicle;
 
     React.useEffect(() => {
@@ -25,8 +25,9 @@ function Contact(props) {
         <>
             <MyNavbar navbarSolidColor="black" />
             <div className="wrapper">
+            <Header routeImage={require("assets/img/vehicles-header.jpg")} title="Our vehicles" description="Choose the one that fits you" filterColor="blue" />
                 <div className="main">
-                    <p>{vehicle.name}</p>
+                    <DetailsFormSection vehicle = {vehicle}/>
                 </div>
                 <Footer />
             </div>
@@ -34,33 +35,4 @@ function Contact(props) {
     );
 }
 
-export default Contact;
-
-/*
-postBookNow(room) {
-    console.log(‘postBookNow: ’,room);
-    //var axios = require(‘axios’);
-    var data = JSON.stringify({"roomId":"1","room":{"id":"1","code":"SU2","description":"descripcion de la room","pricePerNight":"1000","image":"imagen.jpg","guests":"2","roomtypesByFkRoomtypeId":null},"checkIn":"11-10-2020","checkOut":"15-10-2021","guests":"2","totalPrice":"1000"});
-    var config = {
-      method: 'post',
-      url: 'http://pom-hotel.code:8080/api/findroom',
-      headers: { 
-        'Access-Control-Allow-Origin':'*',
-        'Content-Type': 'application/json', 
-      },
-      data : data
-    };
-    axios.withCredentials = true;
-    axios(config)
-    .then(function (response) {
-      console.log(JSON.stringify(response.data));
-      console.log(response.data);
-      console.log(response.status);
-      console.log(response.statusText);
-      console.log(response.headers);
-      console.log(response.config);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }*/
+export default DetailsVehicle;
