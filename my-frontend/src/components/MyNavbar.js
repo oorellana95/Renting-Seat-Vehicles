@@ -13,10 +13,11 @@ import {
 } from "reactstrap";
 
 function MyNavbar(props) {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+  const [navbarColor, setNavbarColor] = React.useState((props.solid) ? "" : "navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   
   React.useEffect(() => {
+    if (!props.solid){
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 399 ||
@@ -34,6 +35,7 @@ function MyNavbar(props) {
     return function cleanup() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
+  }
   });
 
   return (

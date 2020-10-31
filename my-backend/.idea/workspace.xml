@@ -20,20 +20,83 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cd44f2f-a731-4cf0-9d55-d8c019a11e2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/PricesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/dto/BookingsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/utils/PricesUtilImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db2.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/utils/bookingLogicalService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/my-backend.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/utils/bookingLogicalService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/BookingsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/BookingsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/ClientsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/notused/ClientsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/FuelsourcesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/notused/FuelsourcesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/LoginsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/notused/LoginsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/VehiclesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/entities/VehiclesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/ClientLoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/notused/ClientLoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/ClientLoginRepositoryImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/notused/ClientLoginRepositoryImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/notused/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/FuelsourcesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/notused/FuelsourcesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/domain/repositories/notused/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/BookingsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/BookingsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/ClientsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/notused/ClientsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/FuelsourcesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/notused/FuelsourcesFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/LoginsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/notused/LoginsFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/VehiclesFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/factories/VehiclesFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/BookingsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/BookingsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/ClientsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/notused/ClientsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/FuelsourcesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/notused/FuelsourcesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/LoginsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/notused/LoginsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/VehiclesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/VehiclesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/ClientLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/notused/ClientLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/ClientLoginServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/notused/ClientLoginServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/FuelsourcesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/notused/FuelsourcesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/FuelsourcesServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/services/notused/FuelsourcesServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/BookingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/PricesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/controllers/PricesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/dto/BookingsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/ui/dto/BookingsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/controllers/BookingsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/controllers/BookingsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/BookingsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/BookingsEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/ClientsEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/FuelsourcesEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/LoginsEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/VehiclesEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/entities/VehiclesEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/repositories/ClientLoginRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/repositories/ClientLoginRepositoryImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/repositories/ClientRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/repositories/FuelsourcesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/domain/repositories/LoginRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/BookingsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/BookingsFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/ClientsFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/FuelsourcesFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/LoginsFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/VehiclesFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/factories/VehiclesFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/BookingsModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/BookingsModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/ClientsModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/FuelsourcesModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/LoginsModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/VehiclesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/VehiclesModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/services/ClientLoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/services/ClientLoginServiceImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/services/FuelsourcesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/services/FuelsourcesServiceImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/BookingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/BookingsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/MainController$Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/MainController$Greeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/PricesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/controllers/PricesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/dto/BookingsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/ui/dto/BookingsDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/seat-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/seat-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mybackend.seat.SeatRentingApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mybackend.seat.SeatRentingApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mybackend/seat/controllers/BookingsControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/mybackend/seat/controllers/BookingsControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-frontend/src/actions/bookingsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/actions/bookingsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-frontend/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-frontend/src/components/VehicleCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/components/VehicleCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-frontend/src/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-frontend/src/dto/dtoBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/dto/dtoBooking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-frontend/src/pages/DetailsVehicle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/pages/DetailsVehicle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/pages/Vehicles.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/pages/Vehicles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-frontend/src/pages/sections/DetailsFormSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/pages/sections/DetailsFormSection.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,12 +135,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Geekhubs/POM Hotel/pom-hotel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37126437" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\services\notused" />
+      <recent name="C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\models\notused" />
+      <recent name="C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\domain\repositories\notused" />
+      <recent name="C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\factories\notused" />
+      <recent name="C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\java\com\mybackend\seat\application\domain\entities\notused" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.mybackend.seat" />
     </key>
@@ -85,6 +155,7 @@
       <recent name="com.mybackend.seat.ui.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend\src\main\resources" />
       <recent name="C:\Users\User\Desktop\Renting-Seat-Vehicles\my-backend" />
     </key>
   </component>
@@ -172,7 +243,7 @@
       <workItem from="1603798073868" duration="84000" />
       <workItem from="1603816363218" duration="9198000" />
       <workItem from="1603962149366" duration="1285000" />
-      <workItem from="1604069130780" duration="6293000" />
+      <workItem from="1604069130780" duration="11551000" />
     </task>
     <servers />
   </component>
@@ -196,10 +267,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603701397599" />
-    <state x="669" y="-1016" key="#com.intellij.ide.util.MemberChooser" timestamp="1604078179087">
+    <state x="669" y="-1016" key="#com.intellij.ide.util.MemberChooser" timestamp="1604139880305">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="669" y="-1016" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604078179087" />
+    <state x="669" y="-1016" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604139880305" />
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603788492098" />
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603880094841" />
     <state x="272" y="30" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1603701657263">
@@ -227,31 +298,31 @@
     </state>
     <state x="632" y="-933" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604076074663" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603787768461" />
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1604080548574">
+    <state width="1877" height="22" key="GridCell.Tab.0.bottom" timestamp="1604140110813">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604080548574" />
+    <state width="1877" height="22" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604140110813" />
     <state width="1237" height="147" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852011" />
     <state width="845" height="300" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="845" height="300" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603817320643" />
-    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1604080548574">
+    <state width="1877" height="22" key="GridCell.Tab.0.center" timestamp="1604140110813">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604080548574" />
+    <state width="1877" height="22" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604140110813" />
     <state width="1237" height="147" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852011" />
     <state width="845" height="300" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="845" height="300" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603817320643" />
-    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1604080548574">
+    <state width="1877" height="22" key="GridCell.Tab.0.left" timestamp="1604140110813">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604080548574" />
+    <state width="1877" height="22" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604140110813" />
     <state width="1237" height="147" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852009" />
     <state width="845" height="300" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231016" />
     <state width="845" height="300" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603817320642" />
-    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1604080548574">
+    <state width="1877" height="22" key="GridCell.Tab.0.right" timestamp="1604140110813">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604080548574" />
+    <state width="1877" height="22" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604140110813" />
     <state width="1237" height="147" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603789852011" />
     <state width="845" height="300" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="845" height="300" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603817320643" />

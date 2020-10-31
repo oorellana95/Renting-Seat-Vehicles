@@ -10,13 +10,11 @@ import org.springframework.stereotype.Component;
 public class BookingsFactory {
 
     //--- Needed Factories ------------------------------------------
-    ClientsFactory clientsFactory;
     VehiclesFactory vehiclesFactory;
 
     //--- Constructor -----------------------------------------------
     @Autowired
-    public BookingsFactory(ClientsFactory clientsFactory, VehiclesFactory vehiclesFactory) {
-        this.clientsFactory = clientsFactory;
+    public BookingsFactory(VehiclesFactory vehiclesFactory) {
         this.vehiclesFactory = vehiclesFactory;
     }
 
@@ -27,7 +25,8 @@ public class BookingsFactory {
         entity.setCheckIn(model.checkIn);
         entity.setCheckOut(model.checkOut);
         entity.setTotalPrice(model.totalPrice);
-        entity.setClient(clientsFactory.createEntity(model.client));
+        entity.setClient(model.client);
+        entity.setEmail(model.email);
         entity.setVehicle(vehiclesFactory.createEntity(model.vehicle));
         return entity;
     }
@@ -38,7 +37,8 @@ public class BookingsFactory {
         model.checkIn = entity.getCheckIn();
         model.checkOut = entity.getCheckOut();
         model.totalPrice = entity.getTotalPrice();
-        model.client = clientsFactory.createModel(entity.getClient());
+        model.email = entity.getEmail();
+        model.client = entity.getClient();
         model.vehicle = vehiclesFactory.createModel(entity.getVehicle());
         return model;
     }

@@ -6,6 +6,7 @@ public class VehiclesModel {
     public long id;
     public String name;
     public String description;
+    public String specificDescription;
     public Double pricePerDay;
     public int passengers;
     public String gearbox;
@@ -71,5 +72,12 @@ public class VehiclesModel {
     }
     public void setGearbox(String gearbox) {
         this.gearbox = gearbox;
+    }
+
+    public String getSpecificDescription() {
+        return specificDescription;
+    }
+    public void setSpecificDescription(String specificDescription) {
+        this.specificDescription = specificDescription;
     }
 }

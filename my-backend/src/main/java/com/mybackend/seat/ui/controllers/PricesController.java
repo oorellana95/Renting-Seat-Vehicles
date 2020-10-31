@@ -26,7 +26,7 @@ public class PricesController {
     //--- Mappings -----------------------------------------------------
     @PostMapping("/finalprice")
     @ResponseBody
-    public double postResponseController(@RequestBody BookingsDTO dto) {
+    public double postPrices(@RequestBody BookingsDTO dto) {
         VehiclesModel vehicle = vehiclesService.findById(dto.id_vehicle);
         return pricesUtilImplementation.calculateTotalPrice(dto.checkIn, dto.checkOut, vehicle.pricePerDay);
     }

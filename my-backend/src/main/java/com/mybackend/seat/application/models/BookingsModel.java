@@ -10,11 +10,21 @@ public class BookingsModel {
     public Date checkIn;
     public Date checkOut;
     public Double totalPrice;
-    public ClientsModel client;
+    public String client;
+    public String email;
     public VehiclesModel vehicle;
 
     //--- Constructor ----------------------------------------------
     public BookingsModel() {
+    }
+
+    public BookingsModel(Date checkIn, Date checkOut, Double totalPrice, String client, String email, VehiclesModel vehicle) {
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+        this.totalPrice = totalPrice;
+        this.client = client;
+        this.email = email;
+        this.vehicle = vehicle;
     }
 
     //--- Getters & Setters ----------------------------------------
@@ -46,11 +56,18 @@ public class BookingsModel {
         this.totalPrice = totalPrice;
     }
 
-    public ClientsModel getClient() {
+    public String getClient() {
         return client;
     }
-    public void setClient(ClientsModel client) {
+    public void setClient(String client) {
         this.client = client;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public VehiclesModel getVehicle() {
@@ -61,6 +78,7 @@ public class BookingsModel {
     }
 
     //--- toString -------------------------------------------------
+
     @Override
     public String toString() {
         return "BookingsModel{" +
@@ -68,7 +86,8 @@ public class BookingsModel {
                 ", checkIn=" + checkIn +
                 ", checkOut=" + checkOut +
                 ", totalPrice=" + totalPrice +
-                ", client=" + client +
+                ", client='" + client + '\'' +
+                ", email='" + email + '\'' +
                 ", vehicle=" + vehicle +
                 '}';
     }

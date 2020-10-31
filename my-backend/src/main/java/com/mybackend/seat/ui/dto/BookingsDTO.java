@@ -1,8 +1,5 @@
 package com.mybackend.seat.ui.dto;
 
-import com.mybackend.seat.application.models.ClientsModel;
-import com.mybackend.seat.application.models.VehiclesModel;
-
 import java.sql.Date;
 
 //--- Model --------------------------------------------------------
@@ -13,6 +10,7 @@ public class BookingsDTO {
     public Date checkIn;
     public Date checkOut;
     public String email;
+    public String client;
 
     //--- Constructor ----------------------------------------------
     public BookingsDTO() {
@@ -47,13 +45,10 @@ public class BookingsDTO {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "BookingsDTO{" +
-                "id_vehicle=" + id_vehicle +
-                ", checkIn=" + checkIn +
-                ", checkOut=" + checkOut +
-                ", email='" + email + '\'' +
-                '}';
+    public String getClient() {
+        return client;
+    }
+    public void setClient(String client) {
+        this.client = client;
     }
 }

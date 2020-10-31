@@ -28,9 +28,19 @@ public class BookingsEntity implements Serializable {
     @Column(name = "totalPrice", nullable = true, precision = 0)
     private Double totalPrice;
 
+    @Basic
+    @Column(name = "client", nullable = true, precision = 0)
+    private String client;
+
+    @Basic
+    @Column(name = "email", nullable = true, precision = 0)
+    private String email;
+
+    /*
     @ManyToOne
     @JoinColumn(name = "fk_client_id", referencedColumnName = "id", table = "bookings")
     private ClientsEntity client;
+    */
 
     @OneToOne
     @JoinColumn(name = "fk_vehicle_id", referencedColumnName = "id", table = "bookings")
@@ -65,11 +75,18 @@ public class BookingsEntity implements Serializable {
         this.totalPrice = totalPrice;
     }
 
-    public ClientsEntity getClient() {
+    public String getClient() {
         return client;
     }
-    public void setClient(ClientsEntity clientsByFkClientId) {
-        this.client = clientsByFkClientId;
+    public void setClient(String client) {
+        this.client = client;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public VehiclesEntity getVehicle() {
@@ -79,7 +96,17 @@ public class BookingsEntity implements Serializable {
         this.vehicle = vehiclesByFkRoomId;
     }
 
+    /*
+    public ClientsEntity getClient() {
+        return client;
+    }
+    public void setClient(ClientsEntity client) {
+        this.client = client;
+    }
+     */
+
     //--- Some general functions -----------------------------------
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -90,12 +117,12 @@ public class BookingsEntity implements Serializable {
                 Objects.equals(checkOut, that.checkOut) &&
                 Objects.equals(totalPrice, that.totalPrice) &&
                 Objects.equals(client, that.client) &&
+                Objects.equals(email, that.email) &&
                 Objects.equals(vehicle, that.vehicle);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, checkIn, checkOut, totalPrice, client, vehicle);
+        return Objects.hash(id, checkIn, checkOut, totalPrice, client, email, vehicle);
     }
-
 }

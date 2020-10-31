@@ -1,6 +1,7 @@
 {
     "vehiclesEndpoint": "http://localhost:8080/api/vehicles",
     "mobilityTypesEndpoint": "http://localhost:8080/api/mobilitytypes",
-    "bookingsEndpoint": "http://localhost:8080/api/mobilitytypes",
+    "bookingsEndpoint": "http://localhost:8080/api/bookings",
+    "postBookingEndpoint": "http://localhost:8080/api/bookings/post-booking",
     "finalPriceEndpoint": "http://localhost:8080/api/finalprice"
 }

@@ -24,6 +24,7 @@ public class VehiclesFactory {
         entity.setId(model.id);
         entity.setName(model.name);
         entity.setDescription(model.description);
+        entity.setSpecificDescription(model.specificDescription);
         entity.setPricePerDay(model.pricePerDay);
         entity.setImage(model.image);
         entity.setGearbox(model.gearbox);
@@ -37,6 +38,7 @@ public class VehiclesFactory {
         model.id = entity.getId();
         model.name = entity.getName();
         model.description = entity.getDescription();
+        model.specificDescription = entity.getSpecificDescription();
         model.pricePerDay = entity.getPricePerDay();
         model.image = entity.getImage();
         model.passengers = entity.getPassengers();

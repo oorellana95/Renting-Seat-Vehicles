@@ -2,7 +2,6 @@ package com.mybackend.seat.application.domain.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 import java.util.Objects;
 
 //--- Entity -------------------------------------------------------
@@ -23,6 +22,9 @@ public class VehiclesEntity implements Serializable {
     @Basic
     @Column(name = "description", nullable = true)
     private String description;
+    @Basic
+    @Column(name = "specificDescription", nullable = true)
+    private String specificDescription;
 
     @Basic
     @Column(name = "pricePerDay", nullable = true, precision = 0)
@@ -44,12 +46,12 @@ public class VehiclesEntity implements Serializable {
     @JoinColumn(name = "fk_mobilitytype_id", referencedColumnName = "id", table = "vehicles")
     private MobilitytypesEntity mobilityType;
 
-    @ManyToMany
+    /*@ManyToMany
     @JoinTable(
             name = "vehicles_fuelsources",
             joinColumns = @JoinColumn(name = "fk_vehicle_id", referencedColumnName = "id", table = "vehicles"),
             inverseJoinColumns = @JoinColumn(name = "fk_fuelsource_id", referencedColumnName = "id", table = "fuelsources"))
-    private List<FuelsourcesEntity> fuelSources;
+    private List<FuelsourcesEntity> fuelSources;*/
 
     //--- Getters & Setters ---------------------------------------
     public long getId() {
@@ -94,12 +96,19 @@ public class VehiclesEntity implements Serializable {
         this.mobilityType = mobilitytype;
     }
 
+    public String getSpecificDescription() {
+        return specificDescription;
+    }
+    public void setSpecificDescription(String specificDescription) {
+        this.specificDescription = specificDescription;
+    }
+/*
     public List<FuelsourcesEntity> getFuelSources() {
         return fuelSources;
     }
     public void setFuelSources(List<FuelsourcesEntity> fuelSources) {
         this.fuelSources = fuelSources;
-    }
+    }*/
 
     public int getPassengers() {
         return passengers;
@@ -116,22 +125,25 @@ public class VehiclesEntity implements Serializable {
     }
 
     //--- Some general functions -----------------------------------
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         VehiclesEntity that = (VehiclesEntity) o;
         return id == that.id &&
+                passengers == that.passengers &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(description, that.description) &&
+                Objects.equals(specificDescription, that.specificDescription) &&
                 Objects.equals(pricePerDay, that.pricePerDay) &&
                 Objects.equals(image, that.image) &&
-                Objects.equals(mobilityType, that.mobilityType) &&
-                Objects.equals(fuelSources, that.fuelSources);
+                Objects.equals(gearbox, that.gearbox) &&
+                Objects.equals(mobilityType, that.mobilityType);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, pricePerDay, image, mobilityType, fuelSources);
+        return Objects.hash(id, name, description, specificDescription, pricePerDay, image, passengers, gearbox, mobilityType);
     }
 }

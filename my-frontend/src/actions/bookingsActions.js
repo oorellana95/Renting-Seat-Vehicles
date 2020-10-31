@@ -28,7 +28,7 @@ export async function fetchPostBooking(dto) {
           },
           body : JSON.stringify(dto)
         };
-      const response = await fetch(config.bookingsEndpoint, requestOptions);
+      const response = await fetch(config.postBookingEndpoint, requestOptions);
       const data = await response.json();
 
       return postABookingSuccess(data);

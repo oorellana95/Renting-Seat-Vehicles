@@ -1,11 +1,4 @@
 package com.mybackend.seat.ui.controllers;
-
-import com.mybackend.seat.application.models.MobilitytypesModel;
-import com.mybackend.seat.application.models.VehiclesModel;
-import com.mybackend.seat.application.services.FuelsourcesService;
-import com.mybackend.seat.application.services.MobilitytypesService;
-import com.mybackend.seat.application.services.VehiclesService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

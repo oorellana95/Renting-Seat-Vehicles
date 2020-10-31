@@ -4,6 +4,8 @@ import MyNavbar from "components/MyNavbar.js";
 import Footer from "components/Footer.js";
 import Header from "components/Header.js";
 import DetailsFormSection from './sections/DetailsFormSection';
+import VehicleCard from 'components/VehicleCard';
+import { Container, Row, Col } from "reactstrap";
 
 //Diferentes formas de crear componentes
 function DetailsVehicle(props) {
@@ -23,11 +25,22 @@ function DetailsVehicle(props) {
 
     return (
         <>
-            <MyNavbar navbarSolidColor="black" />
+            <MyNavbar navbarSolidColor="grey" solid={true} />
             <div className="wrapper">
-            <Header routeImage={require("assets/img/vehicles-header.jpg")} title="Our vehicles" description="Choose the one that fits you" filterColor="blue" />
                 <div className="main">
-                    <DetailsFormSection vehicle = {vehicle}/>
+                    <div className="site-section first">
+                        <Container>
+                            <Row>
+                                <Col md={6} className="mx-auto text-center mb-3 section-heading">
+                                    <h2 class="mb-5">Your vehicle</h2>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <VehicleCard vehicle={vehicle} detail={true} />
+                            </Row>
+                        </Container>
+                    </div>
+                    <DetailsFormSection vehicle={vehicle} />
                 </div>
                 <Footer />
             </div>
