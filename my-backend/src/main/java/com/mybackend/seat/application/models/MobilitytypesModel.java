@@ -1,5 +1,7 @@
 package com.mybackend.seat.application.models;
 
+import com.mybackend.seat.application.domain.entities.OffersEntity;
+
 import java.util.List;
 
 public class MobilitytypesModel {
@@ -8,6 +10,7 @@ public class MobilitytypesModel {
     public long id;
     public String name;
     public String description;
+    public List<OffersEntity> offers;
 
     //--- Constructor ----------------------------------------------
     public MobilitytypesModel() {
@@ -35,4 +38,10 @@ public class MobilitytypesModel {
         this.description = description;
     }
 
+    public List<OffersEntity> getOffers() {
+        return offers;
+    }
+    public void setOffers(List<OffersEntity> offers) {
+        this.offers = offers;
+    }
 }

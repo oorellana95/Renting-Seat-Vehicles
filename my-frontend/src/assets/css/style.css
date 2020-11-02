@@ -847,6 +847,12 @@ ul li {
   margin-bottom: 0px
 }
 
+.blog_right_sidebar .post_category_widget .cat-list li a p.active {
+  margin-bottom: 0px;
+  color: #009DFF;
+  font-weight:bold;
+}
+
 .blog_right_sidebar .post_category_widget .cat-list li+li {
   padding-top: 15px
 }

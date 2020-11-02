@@ -1,5 +1,9 @@
 package com.mybackend.seat.application.models;
 
+import com.mybackend.seat.application.domain.entities.OffersEntity;
+
+import java.util.List;
+
 public class VehiclesModel {
 
     //--- Attributes -----------------------------------------------
@@ -12,6 +16,7 @@ public class VehiclesModel {
     public String gearbox;
     public String image;
     public MobilitytypesModel mobilityType;
+    public List<OffersEntity> offers;
 
     //--- Constructor ----------------------------------------------
     public VehiclesModel() {
@@ -80,4 +85,12 @@ public class VehiclesModel {
     public void setSpecificDescription(String specificDescription) {
         this.specificDescription = specificDescription;
     }
+
+    public List<OffersEntity> getOffers() {
+        return offers;
+    }
+    public void setOffers(List<OffersEntity> offers) {
+        this.offers = offers;
+    }
+
 }

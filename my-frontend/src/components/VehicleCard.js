@@ -2,17 +2,14 @@ import React from 'react'
 import { Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faGripHorizontal } from '@fortawesome/free-solid-svg-icons'
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function VehicleCard(props) {
     const vehicle = props.vehicle;
-    const history = useHistory();
-    const handleClick = () => history.push('/detail', {
-        vehicle: vehicle
-    })
 
     return (
         <>
+
             <article className="vehicle_item">
                 <div className="vehicle_item_img">
                     <img className="card-img rounded-0" src={require(`assets/img/vehicles-for-rent/${vehicle.image}`)} alt=""></img>
@@ -23,7 +20,7 @@ function VehicleCard(props) {
 
                 <div className="vehicle_details">
                     <h2>{vehicle.name}</h2>
-                    {props.detail ? (<><p>{vehicle.description}</p> <p>{vehicle.specificDescription}</p></>):(<p>{vehicle.description.slice(1, 145) + "..."}</p>)}
+                    {props.detail ? (<><p>{vehicle.description}</p> <p>{vehicle.specificDescription}</p></>) : (<p>{vehicle.description.slice(1, 145) + "..."}</p>)}
                     <Row>
                         <Col sm={6} xs={12}>
                             <ul className="vehicle-info-link">
@@ -43,7 +40,8 @@ function VehicleCard(props) {
                                         <span href="#" className="price float-right">{vehicle.pricePerDay} € / day</span>
                                     </Col>
                                     <Col sm={3} xs={6} className="pr-4">
-                                        <a onClick={handleClick} className="book_now float-right">Book now</a>
+                                        
+                                        <a className="book_now float-right"><Link to={"detail/" + vehicle.id}>Book now!</Link></a>
                                     </Col>
                                 </>
                             )}

@@ -2,6 +2,7 @@ package com.mybackend.seat.application.domain.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 //--- Entity -------------------------------------------------------
@@ -45,6 +46,13 @@ public class VehiclesEntity implements Serializable {
     @ManyToOne
     @JoinColumn(name = "fk_mobilitytype_id", referencedColumnName = "id", table = "vehicles")
     private MobilitytypesEntity mobilityType;
+
+    @ManyToMany
+    @JoinTable(
+            name = "offers_vehicles",
+            joinColumns = @JoinColumn(name = "fk_vehicle_id", referencedColumnName = "id", table = "vehicles"),
+            inverseJoinColumns = @JoinColumn(name = "fk_offers_id", referencedColumnName = "id", table = "offers"))
+    private List<OffersEntity> offers;
 
     /*@ManyToMany
     @JoinTable(

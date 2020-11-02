@@ -32,3 +32,19 @@ export function fetchVehicles() {
         }
     }
 }
+
+//Hola Oscar
+export function fetchVehicleById() {
+
+    return async dispatch => {
+        dispatch(getVehiclesById());
+        
+        try {
+            const response = await fetch(config.vehiclesEndpoint);
+            const data = await response.json();
+            dispatch(getVehiclesSuccess(data));
+        } catch(error) {
+            dispatch(getVehiclesFailure(error));
+        }
+    }
+}

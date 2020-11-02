@@ -11,10 +11,17 @@ import CategoryList from 'components/CategoryList';
 import { Container, Row, Col } from "reactstrap";
 import NumSelector from 'components/NumSelector';
 
+
 //Diferentes formas de crear componentes
 class Vehicles extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      filter: {
+        passengers: 1, 
+        mobilityType: 0
+      },
+      mobilityTypes: this.props.mobilityTypes.mobilityTypes}
   }
 
   componentDidMount() {
@@ -36,14 +43,29 @@ class Vehicles extends React.Component {
     if (this.props.vehicles.isLoading) return <p>Loading vehicles...</p>
     if (this.props.vehicles.hasErrors) return <p>Unable to display vehicles. Error: {this.props.error}</p>
 
-    return this.props.vehicles.vehicles.map(item => <VehicleCard vehicle={item} key={item.id} />)
+    return this.getVehiclesFiltered().map(item => <VehicleCard vehicle={item} key={item.id} />);
   }
+
+  getVehiclesFiltered(){
+    return this.props.vehicles.vehicles.filter(item => 
+      (+item.passengers >= this.state.filter.passengers) && 
+      (this.state.filter.mobilityType!=0 ? item.mobilityType.id == this.state.filter.mobilityType : true)
+      );
+  }
+
+  filterVehiclesByMobilityTypes(value) {
+    this.setState({ filter: {passengers : this.state.filter.passengers, mobilityType : value}});
+  };
+
+  filterVehiclesByPassengers(value) {
+    this.setState({ filter: {passengers : value, mobilityType : this.state.filter.mobilityType}});
+  };
 
   renderMobilityTypes() {
     if (this.props.isLoading) return <p>Loading types...</p>
     if (this.props.hasErrors) return <p>Unable to display types. Error: {this.props.error}</p>
 
-    return <CategoryList items={this.props.mobilityTypes.mobilityTypes} />
+    return <CategoryList items={this.state.mobilityTypes} itemAll={true} filterFunction ={this.filterVehiclesByMobilityTypes.bind(this)}  />
   }
 
   render() {
@@ -60,7 +82,7 @@ class Vehicles extends React.Component {
                 </Col>
                 <Col lg={3} >
                   {this.renderMobilityTypes()}
-                  <NumSelector nums={[1,2,4,5,7]}/>
+                  <NumSelector nums={[1,2,4,5,7]} filterFunction={this.filterVehiclesByPassengers.bind(this)} />
                 </Col>
               </Row>
             </Container>

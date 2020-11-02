@@ -27,6 +27,14 @@ public class MobilitytypesEntity implements Serializable {
     @OneToMany(mappedBy = "mobilityType")
     private List<VehiclesEntity> vehicles;
 
+    @ManyToMany
+    @JoinTable(
+            name = "offers_mobilitytypes",
+            joinColumns = @JoinColumn(name = "fk_mobilitytype_id", referencedColumnName = "id", table = "mobilitytypes"),
+            inverseJoinColumns = @JoinColumn(name = "fk_offers_id", referencedColumnName = "id", table = "offers"))
+    private List<OffersEntity> offers;
+
+
     //--- Getters & Setters ---------------------------------------
     public long getId() {
         return id;

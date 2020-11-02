@@ -1,5 +1,6 @@
 com\mybackend\seat\application\domain\entities\VehiclesEntity.class
 com\mybackend\seat\application\domain\entities\BookingsEntity.class
+com\mybackend\seat\application\domain\entities\OffersEntity.class
 com\mybackend\seat\ui\controllers\VehiclesController.class
 com\mybackend\seat\application\factories\MobilitytypesFactory.class
 com\mybackend\seat\ui\controllers\BookingsController.class

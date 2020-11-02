@@ -53,6 +53,53 @@ INSERT INTO VEHICLES VALUES
 (18,4, 'Nuevo CUPRA León', 'Ad nisi irure deserunt voluptate laboris elit fugiat sunt. Adipisicing sunt in sint ullamco ea aliqua culpa mollit consectetur fugiat sit. Aliquip exercitation occaecat cillum quis do elit enim fugiat magna nisi. Quis ad voluptate elit voluptate mollit ea adipisicing amet.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adcing elit. Consequuntur at tenetur fuga non totam quas sapiente odio ullam. Obcaecati ab eius aliquam qui facilis eligendi ipsa id facilis nesciunt animi perferendis!  cing elit. Consequuntur at tenetur fuga non totam quas sapiente odio ullam. Obcaecati ab eius aliquam qui facilis eligendi ipsa maiores dolore provident. Illo rem ex labore ut? ' , 220, 5, 'Automatic','18.jpg'),
 (19,4, 'Nuevo CUPRA León Sportstourer', 'Ipsum culpa nostrud ad voluptate. Eiusmod aute duis incididunt incididunt proident nostrud tempor aute et fugiat occaecat. Dolore aliqua tempor elit ipsum pariatur enim ad ullamco commodo exercitation exercitation ullamco cillum minim. Officia magna cupidatat esse esse eiusmod nostrud cupidatat aute pariatur consectetur fugiat qui velit. Ea id irure enim non in dolore.', 'Lorem ipsum dolor sit amet consectetur adipisicing elitcing elit. Consequuntur at tenetur fuga non totam quas sapiente odio ullam. Obcaecati ab eius aliquam qui facilis eligendi ipsa. Ad id facilis nesciunt animi perferendis! cing elit. Consequuntur at tenetur fuga non totam quas sapiente odio ullam. Obcaecati ab eius aliquam qui facilis eligendi maiores dolore provident. Illo rem ex labore ut?  ipsa',250, 5, 'Automatic', '19.jpg');
 
+CREATE TABLE IF NOT EXISTS OFFERS
+(
+    id              bigint AUTO_INCREMENT,
+    name            varchar(50),
+    description     varchar(150),
+    startDate       date,
+    endDate         date,
+    cumulative      boolean,
+    type            enum('absolute','proportional'),
+    quantity        double,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO OFFERS VALUES
+(1, '10% off Luxury cars!','0.9*Avg Price to luxury cars', '2020-10-01','2020-12-31', true, 'proportional', 0.1),
+(2, '5e discount Scooters!','Avg Price minus 5e', '2020-09-01','2020-12-31', true, 'absolute', 5),
+(3, '20% off Seat cars!','0.95*Avg Price', '2020-09-01','2020-12-31', true, 'proportional', 5),
+(4, '10e discount Seat cars!','Price - 10e', '2020-09-01','2020-12-31', true, 'absolute', 10),
+(5, '3e discount per day Mii cars!','Price - 3e', '2020-09-01','2020-12-31', true, 'absolute', 10);
+
+CREATE TABLE IF NOT EXISTS OFFERS_VEHICLES
+(
+    fk_offer_id    bigint,
+    fk_vehicle_id  bigint,
+    FOREIGN KEY (fk_offer_id) REFERENCES OFFERS (id),
+    FOREIGN KEY (fk_vehicle_id) REFERENCES VEHICLES (id)
+);
+
+INSERT INTO OFFERS_VEHICLES VALUES
+(5, 1),
+(5, 2);
+
+CREATE TABLE IF NOT EXISTS OFFERS_MOBILITYTYPES
+(
+    fk_offer_id  	bigint,
+    fk_mobilitytypes_id  		bigint,
+    FOREIGN KEY (fk_offer_id) REFERENCES OFFERS (id),
+    FOREIGN KEY (fk_mobilitytypes_id) REFERENCES MOBILITYTYPES (id)
+);
+
+INSERT INTO OFFERS_MOBILITYTYPES VALUES
+(1, 4),
+(2, 1),
+(2, 2),
+(3, 3),
+(4, 3);
+
 CREATE TABLE IF NOT EXISTS BOOKINGS
 (
     id              bigint AUTO_INCREMENT,
