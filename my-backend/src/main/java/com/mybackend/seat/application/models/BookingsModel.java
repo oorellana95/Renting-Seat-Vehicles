@@ -79,16 +79,4 @@ public class BookingsModel {
 
     //--- toString -------------------------------------------------
 
-    @Override
-    public String toString() {
-        return "BookingsModel{" +
-                "id=" + id +
-                ", checkIn=" + checkIn +
-                ", checkOut=" + checkOut +
-                ", totalPrice=" + totalPrice +
-                ", client='" + client + '\'' +
-                ", email='" + email + '\'' +
-                ", vehicle=" + vehicle +
-                '}';
-    }
 }

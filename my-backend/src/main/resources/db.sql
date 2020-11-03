@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS OFFERS
     startDate       date,
     endDate         date,
     cumulative      boolean,
-    type            enum('absolute','proportional'),
+    type            varchar(50),
     quantity        double,
     PRIMARY KEY (id)
 );
@@ -83,14 +83,15 @@ CREATE TABLE IF NOT EXISTS OFFERS_VEHICLES
 
 INSERT INTO OFFERS_VEHICLES VALUES
 (5, 1),
+(3, 1),
 (5, 2);
 
 CREATE TABLE IF NOT EXISTS OFFERS_MOBILITYTYPES
 (
     fk_offer_id  	bigint,
-    fk_mobilitytypes_id  		bigint,
+    fk_mobilitytype_id  		bigint,
     FOREIGN KEY (fk_offer_id) REFERENCES OFFERS (id),
-    FOREIGN KEY (fk_mobilitytypes_id) REFERENCES MOBILITYTYPES (id)
+    FOREIGN KEY (fk_mobilitytype_id) REFERENCES MOBILITYTYPES (id)
 );
 
 INSERT INTO OFFERS_MOBILITYTYPES VALUES

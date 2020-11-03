@@ -17,14 +17,14 @@ public class VehiclesEntity implements Serializable {
     private long id;
 
     @Basic
-    @Column(name = "name", nullable = true)
+    @Column(name = "name", nullable = true, length=100)
     private String name;
 
     @Basic
-    @Column(name = "description", nullable = true)
+    @Column(name = "description", nullable = true, length=500)
     private String description;
     @Basic
-    @Column(name = "specificDescription", nullable = true)
+    @Column(name = "specificDescription", nullable = true, length=500)
     private String specificDescription;
 
     @Basic
@@ -32,7 +32,7 @@ public class VehiclesEntity implements Serializable {
     private Double pricePerDay;
 
     @Basic
-    @Column(name = "image", nullable = true)
+    @Column(name = "image", nullable = true, length=100)
     private String image;
 
     @Basic
@@ -40,26 +40,22 @@ public class VehiclesEntity implements Serializable {
     private int passengers;
 
     @Basic
-    @Column(name = "gearbox", nullable = true)
+    @Column(name = "gearbox", nullable = true, length=50)
     private String gearbox;
 
     @ManyToOne
     @JoinColumn(name = "fk_mobilitytype_id", referencedColumnName = "id", table = "vehicles")
     private MobilitytypesEntity mobilityType;
 
-    @ManyToMany
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
     @JoinTable(
             name = "offers_vehicles",
             joinColumns = @JoinColumn(name = "fk_vehicle_id", referencedColumnName = "id", table = "vehicles"),
-            inverseJoinColumns = @JoinColumn(name = "fk_offers_id", referencedColumnName = "id", table = "offers"))
-    private List<OffersEntity> offers;
-
-    /*@ManyToMany
-    @JoinTable(
-            name = "vehicles_fuelsources",
-            joinColumns = @JoinColumn(name = "fk_vehicle_id", referencedColumnName = "id", table = "vehicles"),
-            inverseJoinColumns = @JoinColumn(name = "fk_fuelsource_id", referencedColumnName = "id", table = "fuelsources"))
-    private List<FuelsourcesEntity> fuelSources;*/
+            inverseJoinColumns = @JoinColumn(name = "fk_offer_id", referencedColumnName = "id", table = "offers"))
+    private List<OffersEntity> offersVehicles;
 
     //--- Getters & Setters ---------------------------------------
     public long getId() {
@@ -110,13 +106,6 @@ public class VehiclesEntity implements Serializable {
     public void setSpecificDescription(String specificDescription) {
         this.specificDescription = specificDescription;
     }
-/*
-    public List<FuelsourcesEntity> getFuelSources() {
-        return fuelSources;
-    }
-    public void setFuelSources(List<FuelsourcesEntity> fuelSources) {
-        this.fuelSources = fuelSources;
-    }*/
 
     public int getPassengers() {
         return passengers;
@@ -132,8 +121,14 @@ public class VehiclesEntity implements Serializable {
         this.gearbox = gearbox;
     }
 
-    //--- Some general functions -----------------------------------
+    public List<OffersEntity> getOffers() {
+        return offersVehicles;
+    }
+    public void setOffers(List<OffersEntity> offers) {
+        this.offersVehicles = offers;
+    }
 
+    //--- Some general functions -----------------------------------
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -147,11 +142,12 @@ public class VehiclesEntity implements Serializable {
                 Objects.equals(pricePerDay, that.pricePerDay) &&
                 Objects.equals(image, that.image) &&
                 Objects.equals(gearbox, that.gearbox) &&
-                Objects.equals(mobilityType, that.mobilityType);
+                Objects.equals(mobilityType, that.mobilityType) &&
+                Objects.equals(offersVehicles, that.offersVehicles);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, specificDescription, pricePerDay, image, passengers, gearbox, mobilityType);
+        return Objects.hash(id, name, description, specificDescription, pricePerDay, image, passengers, gearbox, mobilityType, offersVehicles);
     }
 }

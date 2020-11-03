@@ -29,11 +29,11 @@ public class BookingsEntity implements Serializable {
     private Double totalPrice;
 
     @Basic
-    @Column(name = "client", nullable = true, precision = 0)
+    @Column(name = "client", nullable = true, precision = 0, length=100)
     private String client;
 
     @Basic
-    @Column(name = "email", nullable = true, precision = 0)
+    @Column(name = "email", nullable = true, precision = 0, length=100)
     private String email;
 
     /*
@@ -96,17 +96,8 @@ public class BookingsEntity implements Serializable {
         this.vehicle = vehiclesByFkRoomId;
     }
 
-    /*
-    public ClientsEntity getClient() {
-        return client;
-    }
-    public void setClient(ClientsEntity client) {
-        this.client = client;
-    }
-     */
 
     //--- Some general functions -----------------------------------
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

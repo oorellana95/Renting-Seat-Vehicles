@@ -16,7 +16,6 @@ public class VehiclesModel {
     public String gearbox;
     public String image;
     public MobilitytypesModel mobilityType;
-    public List<OffersEntity> offers;
 
     //--- Constructor ----------------------------------------------
     public VehiclesModel() {
@@ -84,13 +83,6 @@ public class VehiclesModel {
     }
     public void setSpecificDescription(String specificDescription) {
         this.specificDescription = specificDescription;
-    }
-
-    public List<OffersEntity> getOffers() {
-        return offers;
-    }
-    public void setOffers(List<OffersEntity> offers) {
-        this.offers = offers;
     }
 
 }

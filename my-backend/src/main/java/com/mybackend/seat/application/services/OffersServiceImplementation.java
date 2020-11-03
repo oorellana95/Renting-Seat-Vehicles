@@ -1,9 +1,9 @@
 package com.mybackend.seat.application.services;
 
-import com.mybackend.seat.application.factories.VehiclesFactory;
-import com.mybackend.seat.application.domain.entities.VehiclesEntity;
-import com.mybackend.seat.application.models.VehiclesModel;
-import com.mybackend.seat.application.domain.repositories.VehiclesRepository;
+import com.mybackend.seat.application.domain.entities.OffersEntity;
+import com.mybackend.seat.application.domain.repositories.OffersRepository;
+import com.mybackend.seat.application.factories.OffersFactory;
+import com.mybackend.seat.application.models.OffersModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,36 +12,35 @@ import java.util.stream.Collectors;
 
 //--- Service ----------------------------------------------------------
 @Service
-public class VehiclesServiceImplementation implements VehiclesService {
-
+public class OffersServiceImplementation implements OffersService {
     //--- Repositories & Factories needed ------------------------------
-    VehiclesRepository repository;
-    VehiclesFactory factory;
+    OffersRepository repository;
+    OffersFactory factory;
 
     //--- Constructor --------------------------------------------------
     @Autowired
-    public VehiclesServiceImplementation(VehiclesRepository repository, VehiclesFactory factory) {
+    public OffersServiceImplementation(OffersRepository repository, OffersFactory factory) {
         this.repository = repository;
         this.factory = factory;
     }
 
     //--- Functions ----------------------------------------------------
     @Override
-    public VehiclesModel findById(long id) {
+    public OffersModel findById(long id) {
         return factory.createModel(repository.findById(id).get());
     }
 
     @Override
-    public List<VehiclesModel> findAll() {
-        List<VehiclesEntity> entities = repository.findAll();
-        List<VehiclesModel> models = entities.stream().map(entity -> {
+    public List<OffersModel> findAll() {
+        List<OffersEntity> entities = repository.findAll();
+        List<OffersModel> models = entities.stream().map(entity -> {
             return factory.createModel(entity);
         }).collect(Collectors.toList());
         return models;
     }
 
     @Override
-    public void save(VehiclesModel model) {
+    public void save(OffersModel model) {
         repository.save(factory.createEntity(model));
     }
 
@@ -51,7 +50,7 @@ public class VehiclesServiceImplementation implements VehiclesService {
     }
 
     @Override
-    public void delete(VehiclesModel model) {
+    public void delete(OffersModel model) {
         repository.delete(factory.createEntity(model));
     }
 }

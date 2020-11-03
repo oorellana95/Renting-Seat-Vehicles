@@ -1,6 +1,7 @@
 com\mybackend\seat\application\domain\entities\VehiclesEntity.class
 com\mybackend\seat\application\domain\entities\BookingsEntity.class
 com\mybackend\seat\application\domain\entities\OffersEntity.class
+com\mybackend\seat\application\domain\repositories\OffersRepository.class
 com\mybackend\seat\ui\controllers\VehiclesController.class
 com\mybackend\seat\application\factories\MobilitytypesFactory.class
 com\mybackend\seat\ui\controllers\BookingsController.class
@@ -19,11 +20,11 @@ com\mybackend\seat\application\models\VehiclesModel.class
 com\mybackend\seat\application\models\MobilitytypesModel.class
 com\mybackend\seat\application\domain\repositories\MobilitytypesRepository.class
 com\mybackend\seat\application\domain\entities\MobilitytypesEntity.class
-com\mybackend\seat\ui\controllers\MainController$Greeting.class
+com\mybackend\seat\application\models\OffersModel.class
 com\mybackend\seat\application\services\MobilitytypesServiceImplementation.class
-com\mybackend\seat\ui\controllers\MainController.class
 com\mybackend\seat\SeatRentingApplication.class
 com\mybackend\seat\application\services\BookingsService.class
 com\mybackend\seat\application\domain\repositories\BookingsRepository.class
+com\mybackend\seat\application\factories\OffersFactory.class
 com\mybackend\seat\ui\configuration\MyConfiguration.class
 com\mybackend\seat\application\factories\VehiclesFactory.class

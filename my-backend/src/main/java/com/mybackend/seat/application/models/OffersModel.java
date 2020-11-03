@@ -3,14 +3,14 @@ import java.sql.Date;
 
 public class OffersModel {
     //--- Attributes -----------------------------------------------
-    private long id;
-    private String name;
-    private String description;
-    private Date startDate;
-    private Date endDate;
-    private boolean cumulative;
-    private String type;
-    private double quantity;
+    public long id;
+    public String name;
+    public String description;
+    public Date startDate;
+    public Date endDate;
+    public boolean cumulative;
+    public String type;
+    public double quantity;
 
     //--- Constructor ----------------------------------------------
     public OffersModel() {

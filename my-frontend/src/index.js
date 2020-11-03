@@ -41,7 +41,7 @@ ReactDOM.render(
               render={(props) => <Contact {...props} />}
             />
             <Route
-              path="/detail/:id"
+              path="/vehicle/:id"
               render={(props) => <DetailsVehicle {...props} />}
             />
             <Redirect to="/home" />

@@ -17,11 +17,11 @@ public class OffersEntity implements Serializable {
     private long id;
 
     @Basic
-    @Column(name = "name", nullable = true)
+    @Column(name = "name", nullable = true, length=50)
     private String name;
 
     @Basic
-    @Column(name = "description", nullable = true)
+    @Column(name = "description", nullable = true, length=150)
     private String description;
 
     @Basic
@@ -37,17 +37,17 @@ public class OffersEntity implements Serializable {
     private boolean cumulative;
 
     @Basic
-    @Column(name = "type", nullable = true)
+    @Column(name = "type", nullable = true, length=50)
     private String type;
 
     @Basic
     @Column(name = "quantity", nullable = true)
     private double quantity;
 
-    @ManyToMany(mappedBy = "offers")
+    @ManyToMany(mappedBy = "offersVehicles")
     private List<VehiclesEntity> vehicles;
 
-    @ManyToMany(mappedBy = "offers")
+    @ManyToMany(mappedBy = "offersMobilityTypes")
     private List<MobilitytypesEntity> mobilitytypesEntities;
 
     //--- Getters & Setters ---------------------------------------

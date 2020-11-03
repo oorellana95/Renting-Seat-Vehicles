@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from "react";
 // core components
 import MyNavbar from "components/MyNavbar.js";
 import Footer from "components/Footer.js";
-import Header from "components/Header.js";
 import DetailsFormSection from './sections/DetailsFormSection';
 import VehicleCard from 'components/VehicleCard';
 import { Container, Row, Col } from "reactstrap";
+import { fetchVehicleById } from '../actions/vehiclesActions';
+import { connect } from 'react-redux'
+import { store }  from '../store/store';
 
 //Diferentes formas de crear componentes
 function DetailsVehicle(props) {
-    let vehicle = props.history.location.state.vehicle;
+    const [vehicle, setVehicle] = useState(null);
 
     React.useEffect(() => {
+        props.getVehicleById(props.match.params.id).then(setVehicle(store.getState().vehicle.object));
+        
         document.body.classList.add("index-page");
         document.body.classList.add("sidebar-collapse");
         document.documentElement.classList.remove("nav-open");
@@ -21,7 +25,7 @@ function DetailsVehicle(props) {
             document.body.classList.remove("index-page");
             document.body.classList.remove("sidebar-collapse");
         };
-    });
+    }, [props.match.params.id]);
 
     return (
         <>
@@ -36,11 +40,11 @@ function DetailsVehicle(props) {
                                 </Col>
                             </Row>
                             <Row>
-                                <VehicleCard vehicle={vehicle} detail={true} />
+                                {vehicle && <VehicleCard vehicle={vehicle} detail={true} />}
                             </Row>
                         </Container>
                     </div>
-                    <DetailsFormSection vehicle={vehicle} />
+                    {vehicle && <DetailsFormSection vehicle={vehicle} />}
                 </div>
                 <Footer />
             </div>
@@ -48,4 +52,12 @@ function DetailsVehicle(props) {
     );
 }
 
-export default DetailsVehicle;
+const mapStateToProps = state => ({
+    vehicle: state.vehicle.object
+  })
+  
+  const mapDispatchToProps = dispatch => ({
+    getVehicleById: (id) => (fetchVehicleById(id)) (dispatch)
+  })
+  
+export default connect(mapStateToProps, mapDispatchToProps)(DetailsVehicle)

@@ -17,22 +17,25 @@ public class MobilitytypesEntity implements Serializable {
     private long id;
 
     @Basic
-    @Column(name = "name", nullable = true)
+    @Column(name = "name", nullable = true, length=100)
     private String name;
 
     @Basic
-    @Column(name = "description", nullable = true)
+    @Column(name = "description", nullable = true, length=300)
     private String description;
 
     @OneToMany(mappedBy = "mobilityType")
     private List<VehiclesEntity> vehicles;
 
-    @ManyToMany
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
     @JoinTable(
             name = "offers_mobilitytypes",
             joinColumns = @JoinColumn(name = "fk_mobilitytype_id", referencedColumnName = "id", table = "mobilitytypes"),
-            inverseJoinColumns = @JoinColumn(name = "fk_offers_id", referencedColumnName = "id", table = "offers"))
-    private List<OffersEntity> offers;
+            inverseJoinColumns = @JoinColumn(name = "fk_offer_id", referencedColumnName = "id", table = "offers"))
+    private List<OffersEntity> offersMobilityTypes;
 
 
     //--- Getters & Setters ---------------------------------------
@@ -64,6 +67,13 @@ public class MobilitytypesEntity implements Serializable {
         this.vehicles = vehicles;
     }
 
+    public List<OffersEntity> getOffers() {
+        return offersMobilityTypes;
+    }
+    public void setOffers(List<OffersEntity> offers) {
+        this.offersMobilityTypes = offers;
+    }
+
     //--- Some general functions -----------------------------------
     @Override
     public boolean equals(Object o) {
@@ -73,11 +83,12 @@ public class MobilitytypesEntity implements Serializable {
         return id == that.id &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(description, that.description) &&
-                Objects.equals(vehicles, that.vehicles);
+                Objects.equals(vehicles, that.vehicles) &&
+                Objects.equals(offersMobilityTypes, that.offersMobilityTypes);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, vehicles);
+        return Objects.hash(id, name, description, vehicles, offersMobilityTypes);
     }
 }

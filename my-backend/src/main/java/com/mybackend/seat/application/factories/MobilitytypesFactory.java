@@ -5,13 +5,17 @@ import com.mybackend.seat.application.models.MobilitytypesModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.stream.Collectors;
+
 //--- Factory -------------------------------------------------------
 @Component
 public class MobilitytypesFactory {
+    private OffersFactory offersFactory;
 
     //--- Constructor -----------------------------------------------
     @Autowired
-    public MobilitytypesFactory() {
+    public MobilitytypesFactory(OffersFactory offersFactory) {
+        this.offersFactory = offersFactory;
     }
 
     //--- Functions -------------------------------------------------
@@ -20,6 +24,7 @@ public class MobilitytypesFactory {
         entity.setId(model.id);
         entity.setName(model.name);
         entity.setDescription(model.description);
+
         return entity;
     }
 
@@ -28,6 +33,7 @@ public class MobilitytypesFactory {
         model.id = entity.getId();
         model.name = entity.getName();
         model.description = entity.getDescription();
+
         return model;
     }
 }

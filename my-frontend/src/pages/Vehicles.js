@@ -43,22 +43,24 @@ class Vehicles extends React.Component {
     if (this.props.vehicles.isLoading) return <p>Loading vehicles...</p>
     if (this.props.vehicles.hasErrors) return <p>Unable to display vehicles. Error: {this.props.error}</p>
 
-    return this.getVehiclesFiltered().map(item => <VehicleCard vehicle={item} key={item.id} />);
+    let vehicles = this.getVehiclesFiltered();
+    if (vehicles.length == 0) return <p>No vehicles for search filters applied.</p>
+    return vehicles.map(item => <VehicleCard vehicle={item} key={item.id} />);
   }
 
   getVehiclesFiltered(){
-    return this.props.vehicles.vehicles.filter(item => 
+    return this.props.vehicles.objects.filter(item => 
       (+item.passengers >= this.state.filter.passengers) && 
       (this.state.filter.mobilityType!=0 ? item.mobilityType.id == this.state.filter.mobilityType : true)
       );
   }
 
   filterVehiclesByMobilityTypes(value) {
-    this.setState({ filter: {passengers : this.state.filter.passengers, mobilityType : value}});
+    this.setState({ filter: {...this.state.filter, mobilityType : value}});
   };
 
   filterVehiclesByPassengers(value) {
-    this.setState({ filter: {passengers : value, mobilityType : this.state.filter.mobilityType}});
+    this.setState({ filter: {...this.state.filter, passengers : value}});
   };
 
   renderMobilityTypes() {
@@ -100,8 +102,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getVehicles: () => dispatch(fetchVehicles()),
-  getMobilityTypes: () => dispatch(fetchMobilityTypes()),
+  getVehicles: () => (fetchVehicles())(dispatch),
+  getMobilityTypes: () => (fetchMobilityTypes())(dispatch),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Vehicles)

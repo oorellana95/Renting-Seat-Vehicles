@@ -9,7 +9,6 @@ function VehicleCard(props) {
 
     return (
         <>
-
             <article className="vehicle_item">
                 <div className="vehicle_item_img">
                     <img className="card-img rounded-0" src={require(`assets/img/vehicles-for-rent/${vehicle.image}`)} alt=""></img>
@@ -40,8 +39,9 @@ function VehicleCard(props) {
                                         <span href="#" className="price float-right">{vehicle.pricePerDay} € / day</span>
                                     </Col>
                                     <Col sm={3} xs={6} className="pr-4">
-                                        
-                                        <a className="book_now float-right"><Link to={"detail/" + vehicle.id}>Book now!</Link></a>
+                                        <Link to={"vehicle/" + vehicle.id}>
+                                            <a className="book_now float-right">Book now!</a>
+                                        </Link>
                                     </Col>
                                 </>
                             )}
