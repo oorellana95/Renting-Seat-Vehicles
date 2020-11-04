@@ -69,9 +69,12 @@ CREATE TABLE IF NOT EXISTS OFFERS
 INSERT INTO OFFERS VALUES
 (1, '10% off Luxury cars!','0.9*Avg Price to luxury cars', '2020-10-01','2020-12-31', true, 'proportional', 0.1),
 (2, '5e discount Scooters!','Avg Price minus 5e', '2020-09-01','2020-12-31', true, 'absolute', 5),
-(3, '20% off Seat cars!','0.95*Avg Price', '2020-09-01','2020-12-31', true, 'proportional', 5),
+(3, '7% off Seat cars!','0.95*Avg Price', '2020-09-01','2020-12-31', true, 'proportional', 0.07),
 (4, '10e discount Seat cars!','Price - 10e', '2020-09-01','2020-12-31', true, 'absolute', 10),
-(5, '3e discount per day Mii cars!','Price - 3e', '2020-09-01','2020-12-31', true, 'absolute', 10);
+(5, '3e discount per day Mii cars!','Price - 3e', '2020-09-01','2020-12-31', true, 'absolute', 3),
+(6, '30% off','0.7*Avg Price', '2020-10-01','2020-12-31', false, 'proportional', 0.3),
+(7, '25% off','0.7*Avg Price', '2020-10-01','2020-12-31', false, 'proportional', 0.25),
+(8, '25% off','0.7*Avg Price', '2020-10-01','2020-12-31', false, 'absolute', 15);
 
 CREATE TABLE IF NOT EXISTS OFFERS_VEHICLES
 (
@@ -84,7 +87,13 @@ CREATE TABLE IF NOT EXISTS OFFERS_VEHICLES
 INSERT INTO OFFERS_VEHICLES VALUES
 (5, 1),
 (3, 1),
-(5, 2);
+(2, 2),
+(3, 2),
+(4, 2),
+(5, 2),
+(6, 2),
+(7, 2),
+(8, 2);
 
 CREATE TABLE IF NOT EXISTS OFFERS_MOBILITYTYPES
 (

@@ -12,7 +12,7 @@ function NumSelector(props) {
                         <ul className="pagination-info pagination">
                             {props.nums.map(num => {
                                 return (
-                                    <li key={num} className = {'page-item ' + (num < val ? '' : 'active')} onClick={() => {setValue(num); props.filterFunction(num)}}>
+                                    <li key={num} id={"li"+num} className = {'page-item ' + (num < val ? '' : 'active')} onClick={() => {setValue(num); props.filterFunction(num)}}>
                                         <span className="page-link">{num}</span>
                                     </li>
                                 )

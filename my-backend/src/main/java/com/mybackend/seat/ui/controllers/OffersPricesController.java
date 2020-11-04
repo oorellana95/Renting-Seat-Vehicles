@@ -26,7 +26,6 @@ public class OffersPricesController {
     @PostMapping("/finalprice")
     @ResponseBody
     public double getFinalPrice(@RequestBody BookingsDTO dto) {
-        offersPricesService.applyOffersToPrice(dto.id_vehicle, dto.checkIn, dto.checkOut);
-        return 5;
+        return offersPricesService.applyOffersToPrice(dto.id_vehicle, dto.checkIn, dto.checkOut);
     }
 }

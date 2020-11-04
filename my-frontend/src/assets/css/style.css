@@ -830,24 +830,24 @@ ul li {
   border-bottom: 0
 }
 
-.blog_right_sidebar .post_category_widget .cat-list li a {
+.blog_right_sidebar .post_category_widget .cat-list li {
   font-size: 14px;
   line-height: 20px;
   color: #888888
 }
 
-.blog_right_sidebar .post_category_widget .cat-list li a:hover {
+.blog_right_sidebar .post_category_widget .cat-list li:hover {
   font-size: 14px;
   line-height: 20px;
   color: #007bff;
   text-decoration: none
 }
 
-.blog_right_sidebar .post_category_widget .cat-list li a p {
+.blog_right_sidebar .post_category_widget .cat-list li p {
   margin-bottom: 0px
 }
 
-.blog_right_sidebar .post_category_widget .cat-list li a p.active {
+.blog_right_sidebar .post_category_widget .cat-list li p.active {
   margin-bottom: 0px;
   color: #009DFF;
   font-weight:bold;

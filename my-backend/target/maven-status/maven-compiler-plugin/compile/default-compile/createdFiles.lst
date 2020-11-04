@@ -5,11 +5,11 @@ com\mybackend\seat\application\domain\repositories\OffersRepository.class
 com\mybackend\seat\ui\controllers\VehiclesController.class
 com\mybackend\seat\application\factories\MobilitytypesFactory.class
 com\mybackend\seat\ui\controllers\BookingsController.class
-com\mybackend\seat\ui\controllers\PricesController.class
 com\mybackend\seat\ui\dto\BookingsDTO.class
 com\mybackend\seat\application\services\BookingsServiceImplementation.class
 com\mybackend\seat\application\factories\BookingsFactory.class
 com\mybackend\seat\utils\PricesUtilImplementation.class
+com\mybackend\seat\utils\PricesUtil.class
 com\mybackend\seat\application\domain\repositories\VehiclesRepository.class
 com\mybackend\seat\application\models\BookingsModel.class
 com\mybackend\seat\ui\controllers\MobilitytypesController.class

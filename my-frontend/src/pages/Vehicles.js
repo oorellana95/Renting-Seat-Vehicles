@@ -7,7 +7,7 @@ import MyNavbar from "components/MyNavbar.js";
 import Header from "components/Header.js";
 import Footer from "components/Footer.js";
 import VehicleCard from 'components/VehicleCard';
-import CategoryList from 'components/CategoryList';
+import CategorySelector from 'components/CategorySelector';
 import { Container, Row, Col } from "reactstrap";
 import NumSelector from 'components/NumSelector';
 
@@ -67,7 +67,7 @@ class Vehicles extends React.Component {
     if (this.props.isLoading) return <p>Loading types...</p>
     if (this.props.hasErrors) return <p>Unable to display types. Error: {this.props.error}</p>
 
-    return <CategoryList items={this.state.mobilityTypes} itemAll={true} filterFunction ={this.filterVehiclesByMobilityTypes.bind(this)}  />
+    return <CategorySelector items={this.state.mobilityTypes} itemAll={true} filterFunction ={this.filterVehiclesByMobilityTypes.bind(this)}  />
   }
 
   render() {
