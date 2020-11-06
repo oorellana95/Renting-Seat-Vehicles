@@ -7,14 +7,13 @@ import VehicleCard from 'components/VehicleCard';
 import { Container, Row, Col } from "reactstrap";
 import { fetchVehicleById } from '../actions/vehiclesActions';
 import { connect } from 'react-redux'
-import { store }  from '../store/store';
 
 //Diferentes formas de crear componentes
 function DetailsVehicle(props) {
-    const [vehicle, setVehicle] = useState(null);
+    const vehicle = props.vehicle;
 
     React.useEffect(() => {
-        props.getVehicleById(props.match.params.id).then(setVehicle(store.getState().vehicle.object));
+        props.getVehicleById(props.match.params.id);
         
         document.body.classList.add("index-page");
         document.body.classList.add("sidebar-collapse");

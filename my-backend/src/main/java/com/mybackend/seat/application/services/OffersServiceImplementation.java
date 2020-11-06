@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 //--- Service ----------------------------------------------------------
@@ -33,6 +34,14 @@ public class OffersServiceImplementation implements OffersService {
     @Override
     public List<OffersModel> findAll() {
         List<OffersEntity> entities = repository.findAll();
+        List<OffersModel> models = entities.stream().map(entity -> {
+            return factory.createModel(entity);
+        }).collect(Collectors.toList());
+        return models;
+    }
+
+    @Override
+    public List<OffersModel> entitiesToModel(Set<OffersEntity> entities) {
         List<OffersModel> models = entities.stream().map(entity -> {
             return factory.createModel(entity);
         }).collect(Collectors.toList());

@@ -1,10 +1,8 @@
 package com.mybackend.seat.ui.controllers;
 
-import com.mybackend.seat.application.models.VehiclesModel;
 import com.mybackend.seat.application.services.OffersPricesService;
-import com.mybackend.seat.application.services.VehiclesService;
 import com.mybackend.seat.ui.dto.BookingsDTO;
-import com.mybackend.seat.utils.PricesUtilImplementation;
+import com.mybackend.seat.ui.dto.OffersPricesDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +23,7 @@ public class OffersPricesController {
     //--- Mappings -----------------------------------------------------
     @PostMapping("/finalprice")
     @ResponseBody
-    public double getFinalPrice(@RequestBody BookingsDTO dto) {
-        return offersPricesService.applyOffersToPrice(dto.id_vehicle, dto.checkIn, dto.checkOut);
+    public OffersPricesDTO getFinalPrice(@RequestBody BookingsDTO dto) {
+        return offersPricesService.getOffersAndPrice(dto.id_vehicle, dto.checkIn, dto.checkOut);
     }
 }

@@ -11,6 +11,7 @@ public class OffersModel {
     public boolean cumulative;
     public String type;
     public double quantity;
+    public double discountAppliedInRevenues;
 
     //--- Constructor ----------------------------------------------
     public OffersModel() {
@@ -71,5 +72,12 @@ public class OffersModel {
     }
     public void setQuantity(double quantity) {
         this.quantity = quantity;
+    }
+
+    public double getDiscountAppliedInRevenues() {
+        return discountAppliedInRevenues;
+    }
+    public void setDiscountAppliedInRevenues(double discountAppliedInRevenues) {
+        this.discountAppliedInRevenues = discountAppliedInRevenues;
     }
 }

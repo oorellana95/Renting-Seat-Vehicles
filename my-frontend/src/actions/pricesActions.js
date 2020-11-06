@@ -1,24 +1,24 @@
 import * as config from '../config.json';
 
-export const CALCULATE_FINAL_PRICE_SUCCESS = "CALCULATE_FINAL_PRICE_SUCCESS";
-export const CALCULATE_FINAL_PRICE_FAILURE = "CALCULATE_FINAL_PRICE_FAILURE";
+export const GET_FINAL_PRICE_AND_OFFERS_SUCCESS = "GET_FINAL_PRICE_AND_OFFERS_SUCCESS";
+export const GET_FINAL_PRICE_AND_OFFERS_FAILURE = "GET_FINAL_PRICE_AND_OFFERS_FAILURE";
 
 
-export const calculateFinalPriceSuccess = (price) => ({
-    type: CALCULATE_FINAL_PRICE_SUCCESS,
+export const getFinalPriceAndOffersSuccess = (object) => ({
+    type: GET_FINAL_PRICE_AND_OFFERS_SUCCESS,
     payload: { 
-        price: price
+        object: object
     }
 });
 
-export const calculateFinalPriceFailure = (error) => ({
-    type: CALCULATE_FINAL_PRICE_FAILURE,
+export const getFinalPriceAndOffersFailure = (error) => ({
+    type: GET_FINAL_PRICE_AND_OFFERS_FAILURE,
     payload: { 
         error: error
     }
 }); 
 
-export async function fetchCalculateFinalPrice(dto) {
+export async function fetchFinalPriceAndOffers(dto) {
 
         try {
             var requestOptions = {
@@ -32,9 +32,9 @@ export async function fetchCalculateFinalPrice(dto) {
             const response = await fetch(config.finalPriceEndpoint, requestOptions);
             const data = await response.json();
 
-            return calculateFinalPriceSuccess(data);
+            return getFinalPriceAndOffersSuccess(data);
 
         } catch(error) {
-            return calculateFinalPriceFailure(error);
+            return getFinalPriceAndOffersFailure(error);
         }
 }

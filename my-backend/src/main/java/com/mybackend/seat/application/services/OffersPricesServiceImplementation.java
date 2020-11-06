@@ -6,11 +6,12 @@ import com.mybackend.seat.application.domain.repositories.OffersRepository;
 import com.mybackend.seat.application.domain.repositories.VehiclesRepository;
 import com.mybackend.seat.application.factories.OffersFactory;
 import com.mybackend.seat.application.models.OffersModel;
-import com.mybackend.seat.utils.PricesUtil;
-import com.mybackend.seat.utils.PricesUtilImplementation;
+import com.mybackend.seat.ui.dto.OffersPricesDTO;
+import com.mybackend.seat.utils.DiscountUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -19,37 +20,43 @@ import java.util.stream.Collectors;
 public class OffersPricesServiceImplementation implements OffersPricesService{
     //--- Repositories & Factories needed ------------------------------
     VehiclesRepository vehiclesRepository;
-    PricesUtil pricesUtil;
+    OffersService offersService;
+    DiscountUtil discountUtil;
 
     //--- Constructor --------------------------------------------------
     @Autowired
-    public OffersPricesServiceImplementation(VehiclesRepository vehiclesRepository, PricesUtil pricesUtil) {
+    public OffersPricesServiceImplementation(VehiclesRepository vehiclesRepository, OffersService offersService, DiscountUtil discountUtil) {
         this.vehiclesRepository = vehiclesRepository;
-        this.pricesUtil = pricesUtil;
+        this.offersService = offersService;
+        this.discountUtil = discountUtil;
     }
 
     //--- Functions ----------------------------------------------------
     @Override
-    public double applyOffersToPrice(long id, Date checkin, Date checkout) {
+    public OffersPricesDTO getOffersAndPrice(long id, Date checkin, Date checkout) {
         VehiclesEntity vehicle = vehiclesRepository.findById(id).orElse(new VehiclesEntity());
 
         //Merging vehicles and mobility-type offers
-        Set<OffersEntity> offers = new HashSet<OffersEntity>(vehicle.getOffers());
-        offers.addAll(vehicle.getMobilityType().getOffers());
+        List<OffersModel> offers = getArrayAllOffers(vehicle);
 
-        //Separating types of offers.
-        List<OffersEntity> offers_cumu_abs = offers.stream().filter(o -> o.isCumulative() && o.getType().equals("absolute") && (new Date()).before(o.getEndDate())).collect(Collectors.toList());
-        List<OffersEntity> offers_cumu_prop = offers.stream().filter(o -> o.isCumulative() && o.getType().equals("proportional") && (new Date()).before(o.getEndDate())).collect(Collectors.toList());
-
-        List<OffersEntity> offers_noncumu_abs = offers.stream().filter(o -> !o.isCumulative() && o.getType().equals("absolute") && (new Date()).before(o.getEndDate())).collect(Collectors.toList());
-        List<OffersEntity> offers_noncumu_prop = offers.stream().filter(o -> !o.isCumulative() && o.getType().equals("proportional") && (new Date()).before(o.getEndDate())).collect(Collectors.toList());
-
-
-
-        double hola = pricesUtil.calculateDiscountAbsolute(checkin,checkout,offers_cumu_abs.get(0));
-
-        //Debo devolver el precio final y todas las ofertas aplicadas
-        return hola;
+        //Cumulative DTO
+        OffersPricesDTO dto = discountUtil.getAllAppliedOffersAndTotalDiscount(offers, checkin, checkout, vehicle.getPricePerDay());
+        dto.defaultTotalPrice = discountUtil.getDefaultPrice(checkin, checkout, vehicle.getPricePerDay());
+        dto.finalTotalPrice = discountUtil.getFinalPrice(dto.defaultTotalPrice, dto.finalTotalDiscount);
+        return dto;
     }
 
+    public List<OffersModel> getArrayAllOffers(VehiclesEntity vehicle){
+        Set<OffersEntity> offersEntities = new HashSet<OffersEntity>();
+
+        if (vehicle.getOffers().size() > 0 ) {
+            offersEntities.addAll(vehicle.getOffers());
+        }
+
+        if (vehicle.getMobilityType().getOffers().size() > 0) {
+            offersEntities.addAll(vehicle.getMobilityType().getOffers());
+        }
+
+        return offersService.entitiesToModel(offersEntities);
+    }
 }

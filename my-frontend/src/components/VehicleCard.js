@@ -11,7 +11,7 @@ function VehicleCard(props) {
         <>
             <article className="vehicle_item">
                 <div className="vehicle_item_img">
-                    <img className="card-img rounded-0" src={require(`assets/img/vehicles-for-rent/${vehicle.image}`)} alt=""></img>
+                    {vehicle.image && <img className="card-img rounded-0" src={require(`assets/img/vehicles-for-rent/${vehicle.image}`)} alt=""></img>}
                     <span className="vehicle_item_date">
                         <FontAwesomeIcon icon={faUser} color="white" size="2x" />
                     </span>

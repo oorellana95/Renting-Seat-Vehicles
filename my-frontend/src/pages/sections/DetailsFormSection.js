@@ -4,7 +4,7 @@ import { Container, Row, Col, FormGroup, Form, Input, Button } from "reactstrap"
 import es from 'date-fns/locale/es';
 import "react-datepicker/dist/react-datepicker.css";
 
-import { fetchCalculateFinalPrice } from '../../actions/pricesActions';
+import { fetchFinalPriceAndOffers } from '../../actions/pricesActions';
 import { fetchPostBooking } from '../../actions/bookingsActions';
 import { dtoBooking, dtoBookingPrices } from '../../dto/dtoBooking';
 registerLocale('es', es);
@@ -26,7 +26,7 @@ function DetailsFormSection(props) {
         }
         else if (end) {
             let dto = new dtoBookingPrices(props.vehicle.id, startDate, end)
-            fetchCalculateFinalPrice(dto).then(res => setFinalPrice(res.payload.price));
+            fetchFinalPriceAndOffers(dto).then(res => setFinalPrice(res.payload.object.finalTotalPrice));
         }
     };
 
