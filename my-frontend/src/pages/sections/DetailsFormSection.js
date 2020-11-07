@@ -1,20 +1,25 @@
 import React, { useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
-import { Container, Row, Col, FormGroup, Form, Input, Button } from "reactstrap";
+import { Container, Row, Col, FormGroup, Button} from "reactstrap";
 import es from 'date-fns/locale/es';
 import "react-datepicker/dist/react-datepicker.css";
-
+import ModalOffers from 'components/ModalOffers';
+import ModalForm from 'components/ModalForm';
+import SummaryPricesList from 'components/SummaryPricesList';
 import { fetchFinalPriceAndOffers } from '../../actions/pricesActions';
 import { fetchPostBooking } from '../../actions/bookingsActions';
-import { dtoBooking, dtoBookingPrices } from '../../dto/dtoBooking';
+import { dtoBookingPrices, dtoBooking } from '../../dto/dtoBooking';
+import { dtoOffersPrices } from '../../dto/dtoOffersPrices';
+
+
 registerLocale('es', es);
 
 function DetailsFormSection(props) {
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
-    const [finalPrice, setFinalPrice] = useState(0);
-    const [client, setClient] = useState("");
-    const [email, setEmail] = useState("");
+    const [detailPrices, setDetailPrices] = useState(new dtoOffersPrices());
+    const [modalOffers, setModalOffers] = React.useState(false);
+    const [modalForm, setModalForm] = React.useState(false);
 
     const onChange = dates => {
         const [start, end] = dates;
@@ -22,66 +27,52 @@ function DetailsFormSection(props) {
         setEndDate(end);
 
         if (start != startDate) {
-            setFinalPrice(0);
+            setDetailPrices(new dtoOffersPrices());
         }
         else if (end) {
             let dto = new dtoBookingPrices(props.vehicle.id, startDate, end)
-            fetchFinalPriceAndOffers(dto).then(res => setFinalPrice(res.payload.object.finalTotalPrice));
+            fetchFinalPriceAndOffers(dto).then(res => setDetailPrices(res.payload.object));
         }
     };
 
-    const bookNow = () => {
+    const bookNow = (client, email) => {
         let dto = new dtoBooking(props.vehicle.id, client, email, startDate, endDate)
-        fetchPostBooking(dto).then(res => console.log(res));
+        fetchPostBooking(dto).then(res => alert(res));
     }
-
     return (
-        <>
-            <div className="site-section bg-light">
+        <>             
+            <ModalOffers modal={modalOffers} functionVisibility={setModalOffers} data={detailPrices}/>
+            <ModalForm modal={modalForm} functionVisibility={setModalForm} action={bookNow} data={detailPrices}/>
+
+            <div className="bg-light p-2 pt-4">
                 <Container>
-                    <div className="section-title mb-5">
+                    <div className="section-title">
                         <h3>Enter your details</h3>
                     </div>
-                    <Form className="form-contact contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
-                        <Row>
-                            <Col className="d-flex justify-content-center align-self-center" sm={6}>
-                                <FormGroup className="form-group">
-                                    <DatePicker
-                                        className="form-control valid"
-                                        placeholderText="Check-in - Check-out"
-                                        startDate={startDate}
-                                        endDate={endDate}
-                                        onChange={onChange}
-                                        minDate={new Date()}
-                                        selectsRange
-                                        locale="es"
-                                        inline
-                                    />
-                                </FormGroup>
-                            </Col>
-                            <Col className="pt-3" sm={6}>
-                                <FormGroup className="form-group">
-                                    <Input className="form-control valid" name="name" id="name" type="text" placeholder="Enter your full name" onChange={(e) => setClient(e.target.value)}></Input>
-                                </FormGroup>
-                                <FormGroup className="form-group">
-                                    <Input className="form-control valid" name="email" id="email" type="email" placeholder="Enter your email address"></Input>
-                                </FormGroup>
-                                <FormGroup className="form-group">
-                                    <Input className="form-control valid" name="email" id="email" type="email" placeholder="Confirm your email address" onChange={(e) => setEmail(e.target.value)}></Input>
-                                </FormGroup>
-                            </Col>
-                        </Row>
-                    </Form>
-                </Container>
-            </div>
-            <div className="site-section">
-                <Container>
+                    <Row className="d-flex justify-content-center align-self-center">
+                            <FormGroup className="form-group">
+                                <DatePicker
+                                    className="form-control valid"
+                                    placeholderText="Check-in - Check-out"
+                                    startDate={startDate}
+                                    endDate={endDate}
+                                    onChange={onChange}
+                                    minDate={new Date()}
+                                    selectsRange
+                                    locale="es"
+                                    inline
+                                />
+                            </FormGroup>
+                    </Row>
+                    <div className="section-title mt-2 mb-4">
+                        <h4>Summary Prices</h4>
+                    </div>
+                    <Row>     
+                        <SummaryPricesList totalDays={detailPrices.totalDays} defaultTotalPrice={detailPrices.defaultTotalPrice} offers={detailPrices.offers} finalTotalDiscount={detailPrices.finalTotalDiscount} finalTotalPrice={detailPrices.finalTotalPrice} setModalOffers={setModalOffers}/>
+                    </Row>
                     <Row>
-                        <Col sm={8}>
-                            <span className="boxed-btn">Final Price: {finalPrice}</span>
-                        </Col>
-                        <Col className="d-flex justify-content-center align-self-center form-group" sm={4}>
-                            <Button type="submit" onClick={() => { bookNow() }} className="boxed-btn">Book Now</Button>
+                        <Col className="d-flex justify-content-center align-self-center form-group mt-5 mb-4">
+                            <Button type="submit" disabled={!detailPrices.finalTotalPrice} onClick={() => setModalForm(true)} className="boxed-btn">Book Now</Button>
                         </Col>
                     </Row>
                 </Container>

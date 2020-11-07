@@ -10,7 +10,7 @@ import {store, persistor} from './store/store'
 import "assets/css/bootstrap.min.css";
 import "assets/css/template.css";
 import "assets/css/style.css";
-import 'assets/css/sass.scss';
+import 'assets/scss/sass.scss';
 
 // pages for this kit
 import Home from "pages/Home.js";

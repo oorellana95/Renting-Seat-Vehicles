@@ -39,11 +39,15 @@ function DetailsVehicle(props) {
                                 </Col>
                             </Row>
                             <Row>
+                            <Col md={8}>
                                 {vehicle && <VehicleCard vehicle={vehicle} detail={true} />}
+                            </Col>
+                            <Col md={4}>
+                                {vehicle && <DetailsFormSection vehicle={vehicle} />}
+                            </Col>
                             </Row>
                         </Container>
                     </div>
-                    {vehicle && <DetailsFormSection vehicle={vehicle} />}
                 </div>
                 <Footer />
             </div>

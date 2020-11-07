@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 function NumSelector(props) {
     const [val, setValue] = React.useState(1)
     return (

@@ -38,7 +38,7 @@ INSERT INTO VEHICLES VALUES
 (3, 3, 'Ibiza', 'Nulla ullamco sint et duis magna. Deserunt duis adipisicing ad et excepteur consectetur ea aliquip et sit et duis commodo. Non do est proident proident.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorum aspernatur suscipit aut rem earum perferendis laboriosam architecto, numquam voluptates officia nulla quam! Cum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. Illo rem ex labore ut?Praesentium, earum iure cumque veniam perspiciatis id illum culpa ipsum repudiandae molestias eaque minus nostrum, quo ut?', 40, 5, 'Manual', '3.jpg'),
 (4, 3, 'León', 'Eu veniam dolor eu aliquip. Laborum amet exercitation adipisicing deserunt fugiat minim nulla reprehenderit. Ex fugiat consequat labore laborum. Enim id labore cillum deserunt ipsum officia laboris ea fugiat. Proident minim enim voluptate adipisicing amet proident consequat minim magna deserunt pariatur incididunt nostrud.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, necessitatibus facere debitis odit dolor animi laboriosam dolorum facilis eaque nulla illo cupiditate deleniti sit? Ratione reiciendis hic doloribus illum labore Cum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. Illo rem ex labore ut?laboriosam ut, dolorum inventore est aperiam quis omnis aut architecto.', 60, 5, 'Manual', '4.jpg'),
 (5, 3, 'Nuevo León', 'Minim irure non exercitation dolor. Reprehenderit qui esse culpa ex in pariatur incididunt id irure in duis ipsum. Lorem non duis qui eiusmod proident magna. Elit qui laboris laboris et veniam ad sit reprehenderit fugiat et mollit ut.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad id facilis nesciunt animi perferendis! Aliquid, modi sint! Molestiae, minima mollitia aliquid velit quidem pariatur vero reprehenderit voluptatibus sunt ex ullam adipisci cupiditate eveniet corporis non dolore Cum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. Illo rem ex labore ut? laudantium accusantium.',50, 5, 'Automatic', '5.jpg'),
-(6, 3, 'León Sportstourer', 'Nulla amet reprehenderit dolor officia sunt non aliqua duis ex ipsum irure. Proident laborum cupidatat occaecat cupidatat aliqua eu. Eu ut minim commodo nostrud amet sunt occaecat Lorem laboris eu excepteur.', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio labore dolor molestiae dolores at voluptates, ad rerum culpa veritatis. Rem adipisci voluptatibus rerum. Aliquam quia Cum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. pti sapiente aspernatur dolorum ullamIllo rem ex labore ut? recusandae distinctio ut.',65, 5, 'Automatic','6.jpg'),
+(6, 3, 'Nuevo León Sportstourer', 'Nulla amet reprehenderit dolor officia sunt non aliqua duis ex ipsum irure. Proident laborum cupidatat occaecat cupidatat aliqua eu. Eu ut minim commodo nostrud amet sunt occaecat Lorem laboris eu excepteur.', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio labore dolor molestiae dolores at voluptates, ad rerum culpa veritatis. Rem adipisci voluptatibus rerum. Aliquam quia Cum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. pti sapiente aspernatur dolorum ullamIllo rem ex labore ut? recusandae distinctio ut.',65, 5, 'Automatic','6.jpg'),
 (7, 3, 'Nuevo León Sportstourer', 'Id sit occaecat veniam ex officia non laboris. Culpa incididunt consectetur aliqua dolor anim Lorem est. Ut aute ex officia esse dolor veniam exercitation nostrud voluptate. Sit nisi est quis ullamco adipisicing adipisicing culpa ipsum commodo Lorem esse officia laborum elit. In ex ea aliquip cupidatat.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur at tenetur fuga non totam quas sapiente odio ullam. Obcaecati ab eius aliquam qui facilis eligendi ipsa impedit Cum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. Illo rem ex labore ut? laborum consequuntur ut!',60, 5, 'Automatic','7.jpg'),
 (8, 3, 'Arona', 'Est velit quis nulla magna excepteur id cillum qui aute commodo nulla. Adipisicing non sit laboris dolore. Officia Lorem consequat non consectetur pariatur et non occaecat reprehenderit laborum irure in. Pariatur anim deserunt adipisicing labore aute enim amet eiusmod pariatur commodo duis.','Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quas accusamus nobis illo, autem illum nisi, distinctio corporis dolore reprehenderit nam voluptatum rem? Fugiat, deleniti voluptatum! Minus cupiditate voluptatibus totamCum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. Illo rem ex labore ut? beatae ducimus velit obcaecati, mollitia sint illum.',55, 5, 'Manual', '8.jpg'),
 (9, 3, 'Alhambra', 'Nisi dolore ea duis cillum officia aliqua ad aliquip officia mollit ea esse tempor duis. Voluptate culpa laboris est minim irure occaecat culpa. Ullamco cupidatat sit sunt reprehenderit veniam aute voluptate laborum esse. Laborum do incididunt reprehenderit dolor non irure dolore ea labore. Enim reprehenderit nulla duis consectetur anim non dolore adipisicing in labore. Cillum nostrud ipsum dolore aliquip veniam veniam amet esse tempor est sunt minim.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, nam pariatur? Minus, praesentium itaque ex quam mollitia dicta obcaecati Cum doloribus sed, magnam corrupti sapiente aspernatur dolorum ullam sequi officia dignissimos et neque maiores dolore provident. Illo rem ex labore ut? pti sapiente aspernatur dolorum ullampti sapiente aspernatur dolorum ullam necessitatibus!',80, 7, 'Automatic', '9.jpg'),
@@ -67,14 +67,13 @@ CREATE TABLE IF NOT EXISTS OFFERS
 );
 
 INSERT INTO OFFERS VALUES
-(1, '10% off Luxury cars!','0.9*Avg Price to luxury cars', '2020-10-01','2020-12-31', true, 'proportional', 0.1),
-(2, '5e discount Scooters!','Avg Price minus 5e', '2020-09-01','2020-12-31', true, 'absolute', 5),
-(3, '7% off Seat cars!','0.95*Avg Price', '2020-09-01','2020-12-31', true, 'proportional', 0.07),
-(4, '10e discount Seat cars!','Price - 10e', '2020-09-01','2020-12-31', true, 'absolute', 10),
-(5, '3e discount per day Mii cars!','Price - 3e', '2020-09-01','2020-12-31', true, 'absolute', 3),
-(6, '30% off','0.7*Avg Price', '2020-10-01','2020-12-31', false, 'proportional', 0.3),
-(7, '25% off','0.7*Avg Price', '2020-10-01','2020-12-31', false, 'proportional', 0.25),
-(8, '25% off','0.7*Avg Price', '2020-10-01','2020-12-31', false, 'absolute', 15);
+(1, '10% off Luxury cars!','0.1*(Avg Price) to luxury cars', '2020-10-01','2020-12-31', true, 'proportional', 0.1),
+(2, '10e off All New Leon!','Avg Price minus 10e', '2020-09-01','2020-12-31', true, 'absolute', 10),
+(3, '5e off per day Scooters!','Avg Price minus 5e', '2020-09-01','2020-12-31', true, 'absolute', 5),
+(4, '5% off Seat cars!','0.05*Avg Price', '2020-09-01','2020-12-31', true, 'proportional', 0.05),
+(5, '10e off per day Mii cars!','Price minus 10e', '2020-09-01','2020-12-31', true, 'absolute', 10),
+(6, '20% off Atecas','0.2*Avg Price', '2020-10-01','2020-12-31', false, 'proportional', 0.2),
+(7, '30e off per day Tarraco','Avg Price minus 30e', '2020-10-01','2020-12-31', false, 'absolute', 30);
 
 CREATE TABLE IF NOT EXISTS OFFERS_VEHICLES
 (
@@ -85,15 +84,18 @@ CREATE TABLE IF NOT EXISTS OFFERS_VEHICLES
 );
 
 INSERT INTO OFFERS_VEHICLES VALUES
+(2, 5),
+(2, 6),
+(2, 18),
+(2, 19),
+(3, 13),
+(3, 14),
+(3, 15),
 (5, 1),
-(3, 1),
-(2, 2),
-(3, 2),
-(4, 2),
 (5, 2),
-(6, 2),
-(7, 2),
-(8, 2);
+(6, 10),
+(6, 11),
+(7, 12);
 
 CREATE TABLE IF NOT EXISTS OFFERS_MOBILITYTYPES
 (
@@ -104,11 +106,8 @@ CREATE TABLE IF NOT EXISTS OFFERS_MOBILITYTYPES
 );
 
 INSERT INTO OFFERS_MOBILITYTYPES VALUES
-(1, 4),
-(2, 1),
-(2, 2),
-(3, 3),
-(4, 3);
+(4, 3),
+(1, 4);
 
 CREATE TABLE IF NOT EXISTS BOOKINGS
 (

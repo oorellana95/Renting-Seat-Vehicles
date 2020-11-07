@@ -10,6 +10,7 @@ public class OffersPricesDTO {
     public double finalTotalPrice;
     public double finalTotalDiscount;
     public double defaultTotalPrice;
+    public long totalDays;
 
     public OffersPricesDTO() {
         this.offers = new ArrayList<>();
@@ -41,5 +42,12 @@ public class OffersPricesDTO {
     }
     public void setDefaultTotalPrice(double defaultTotalPrice) {
         this.defaultTotalPrice = defaultTotalPrice;
+    }
+
+    public long getTotalDays() {
+        return totalDays;
+    }
+    public void setTotalDays(long totalDays) {
+        this.totalDays = totalDays;
     }
 }

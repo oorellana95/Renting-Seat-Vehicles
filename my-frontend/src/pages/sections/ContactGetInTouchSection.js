@@ -40,26 +40,26 @@ function GetInTouchSection() {
                     </Row>
                     <Row>
                         <Col lg={8}>
-                            <Form className="form-contact contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
+                            <Form className="form-design" action="" method="post" id="contactForm" novalidate="novalidate">
                                 <Row>
                                     <Col xs={12}>
                                         <FormGroup className="form-group">
-                                            <textarea className="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder="Enter Message" ></textarea>
+                                            <textarea className="form-control w-100" name="message" id="message" cols="30" rows="9" placeholder="Enter Message" ></textarea>
                                         </FormGroup>
                                     </Col>
                                     <Col sm={6}>
                                         <FormGroup className="form-group">
-                                            <Input className="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name"></Input>
+                                            <Input className="form-control valid" name="name" id="name" type="text" placeholder="Enter your name"></Input>
                                         </FormGroup>
                                     </Col>
                                     <Col sm={6}>
                                         <FormGroup className="form-group">
-                                            <Input className="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Enter email address"></Input>
+                                            <Input className="form-control valid" name="email" id="email" type="email" placeholder="Enter email address"></Input>
                                         </FormGroup>
                                     </Col>
                                     <Col xs={12}>
                                         <FormGroup className="form-group">
-                                            <Input className="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject"></Input>
+                                            <Input className="form-control" name="subject" id="subject" type="text" placeholder="Enter Subject"></Input>
                                         </FormGroup>
                                     </Col>
                                 </Row>

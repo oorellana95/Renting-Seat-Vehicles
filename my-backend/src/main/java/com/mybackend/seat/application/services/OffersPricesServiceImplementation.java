@@ -41,11 +41,27 @@ public class OffersPricesServiceImplementation implements OffersPricesService{
 
         //Cumulative DTO
         OffersPricesDTO dto = discountUtil.getAllAppliedOffersAndTotalDiscount(offers, checkin, checkout, vehicle.getPricePerDay());
+        dto.totalDays = discountUtil.getDaysBetweenTwoDates(checkin, checkout);
         dto.defaultTotalPrice = discountUtil.getDefaultPrice(checkin, checkout, vehicle.getPricePerDay());
         dto.finalTotalPrice = discountUtil.getFinalPrice(dto.defaultTotalPrice, dto.finalTotalDiscount);
         return dto;
     }
 
+    @Override
+    public double getFinalPrice(long id, Date checkin, Date checkout) {
+        VehiclesEntity vehicle = vehiclesRepository.findById(id).orElse(new VehiclesEntity());
+
+        //Merging vehicles and mobility-type offers
+        List<OffersModel> offers = getArrayAllOffers(vehicle);
+
+        //Cumulative DTO
+        double discount = discountUtil.getAllAppliedOffersAndTotalDiscount(offers, checkin, checkout, vehicle.getPricePerDay()).finalTotalDiscount;
+        double defaultPrice = discountUtil.getDefaultPrice(checkin, checkout, vehicle.getPricePerDay());
+        double finalPrice = discountUtil.getFinalPrice(defaultPrice, discount);
+        return finalPrice;
+    }
+
+    @Override
     public List<OffersModel> getArrayAllOffers(VehiclesEntity vehicle){
         Set<OffersEntity> offersEntities = new HashSet<OffersEntity>();
 

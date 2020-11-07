@@ -25,6 +25,7 @@
     "react-dom": "^16.13.1",
     "react-iframe": "^1.8.0",
     "react-modal-video": "^1.2.6",
+    "react-native": "^0.63.3",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-script-tag": "^1.1.2",

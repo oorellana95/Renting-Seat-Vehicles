@@ -13,7 +13,7 @@ function VehicleCard(props) {
                 <div className="vehicle_item_img">
                     {vehicle.image && <img className="card-img rounded-0" src={require(`assets/img/vehicles-for-rent/${vehicle.image}`)} alt=""></img>}
                     <span className="vehicle_item_date">
-                        <FontAwesomeIcon icon={faUser} color="white" size="2x" />
+                        {vehicle.mobilityType.name}
                     </span>
                 </div>
 
@@ -23,8 +23,8 @@ function VehicleCard(props) {
                     <Row>
                         <Col sm={6} xs={12}>
                             <ul className="vehicle-info-link">
-                                <li><FontAwesomeIcon icon={faGripHorizontal} color="#2977c9" size="1x" className="mr-2" /><span>{vehicle.gearbox}</span></li>
-                                <li><FontAwesomeIcon icon={faUser} color="#2977c9" size="1x" className="mr-2" /><span>{vehicle.passengers} passengers</span></li>
+                                <li><FontAwesomeIcon icon={faGripHorizontal} color="#000" size="1x" className="mr-2" /><span>{vehicle.gearbox}</span></li>
+                                <li><FontAwesomeIcon icon={faUser} color="#000" size="1x" className="mr-2" /><span>{vehicle.passengers} passengers</span></li>
                             </ul>
                         </Col>
                         {props.detail ? (
