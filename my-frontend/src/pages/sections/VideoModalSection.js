@@ -14,7 +14,7 @@ function VideoModalSection(props) {
                     <div className="video_area_inner text-center">
                         <span>{props.miniTitle}</span>
                         <h3>{props.title}</h3>
-                        <a onClick={() => setOpen(true)} className="video_btn popup-video pl-1">
+                        <a type="button" onClick={() => setOpen(true)} className="video_btn popup-video pl-1">
                             <FontAwesomeIcon icon={faPlay} color="black" />
                         </a>
                     </div>

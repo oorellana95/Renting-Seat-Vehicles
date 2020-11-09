@@ -5,11 +5,11 @@ import OffersCard from 'components/OffersCard';
 function HomeOngoingSection() {
     return (
         <>
-            <div class="HomeOngoing-section site-section bg-light">
+            <div className="HomeOngoing-section site-section bg-light">
                 <Container>
                     <Row>
                         <Col md={6} className="mx-auto text-center mb-3 section-heading">
-                            <h2 class="mb-5">Ongoing Offers</h2>
+                            <h2 className="mb-5">Ongoing Offers</h2>
                         </Col>
                     </Row>
                     <Row>

@@ -1,7 +1,5 @@
 import React from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Map = (props) => (
         <div className={props.mini ? "google-map-mini" : "google-map" } >

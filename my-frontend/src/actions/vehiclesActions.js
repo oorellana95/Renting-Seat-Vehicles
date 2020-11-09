@@ -12,13 +12,13 @@ export const GET_VEHICLE_FAILURE = "GET_VEHICLE_FAILURE";
 export const getVehiclesPending = () => ({type: GET_VEHICLES_PENDING});
 export const getVehicleByIdPending = () => ({type: GET_VEHICLE_PENDING});
 
-export const getVehiclesSuccess = (vehicles) => ({
+export const getVehiclesSuccess = (objects) => ({
     type: GET_VEHICLES_SUCCESS,
-    payload: vehicles,
+    payload: objects,
 });
-export const getVehicleByIdSuccess = (vehicle) => ({
+export const getVehicleByIdSuccess = (object) => ({
     type: GET_VEHICLE_SUCCESS,
-    payload: vehicle,
+    payload: object,
 });
 
 export const getVehiclesFailure = (error) => ({

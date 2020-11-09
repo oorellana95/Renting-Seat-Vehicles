@@ -56,7 +56,7 @@ function CarouselSection(props) {
                         </CarouselItem>
                     );
                 })}
-                <a
+                <span
                     className="carousel-control-prev"
                     data-slide="prev"
                     href=""
@@ -66,9 +66,8 @@ function CarouselSection(props) {
                     }}
                     role="button"
                 >
-                    <i className="now-ui-icons arrows-1_minimal-left"></i>
-                </a>
-                <a
+                </span>
+                <span
                     className="carousel-control-next"
                     data-slide="next"
                     href=""
@@ -78,8 +77,7 @@ function CarouselSection(props) {
                     }}
                     role="button"
                 >
-                    <i className="now-ui-icons arrows-1_minimal-right"></i>
-                </a>
+                </span>
             </Carousel>
 
         </>

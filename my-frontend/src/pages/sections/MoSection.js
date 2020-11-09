@@ -34,7 +34,7 @@ function MoSection() {
                                 <p> Seat MÓ, the company's new urban mobility brand of Seat and Cupra. This brand is driving an 
                                 strategy focused on the mobility segment, having lanched new micromobility products and services, 
                                 including the Seat MÓ eScooter 125 and the Seat MÓ eKickscooter 65.</p>
-                                <a href="https://www.seatmo.com/" target="_blank" className="line-button">Learn More</a>
+                                <a href="https://www.seatmo.com/" rel="noopener noreferrer" target="_blank" className="line-button">Learn More</a>
                             </div>
                         </Col>
                     </Row>

@@ -11,13 +11,13 @@ function CategorySelector(props) {
                     <ul className="list cat-list">
                         {props.itemAll && (
                             <li key="0" id="li0" className="d-flex" onClick={() => { setValue(0); props.filterFunction(0) }}>
-                                <p className={(val == 0 ? 'active' : '')}>All categories</p>
+                                <p className={(val === 0 ? 'active' : '')}>All categories</p>
                             </li>
                         )}
                         {(props.items || !props.itemAll) && props.items.map(item => {
                             return (
                                 <li className="d-flex" key={item.id} id={"li" + item.id} onClick={() => { setValue(item.id); props.filterFunction(item.id) }}>
-                                    <p className={(val == item.id ? 'active' : '')}>{item.name}</p>
+                                    <p className={(val === item.id ? 'active' : '')}>{item.name}</p>
                                 </li>
                             )
                         })}

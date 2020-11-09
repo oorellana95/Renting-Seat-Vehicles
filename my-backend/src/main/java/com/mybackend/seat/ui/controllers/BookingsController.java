@@ -34,8 +34,7 @@ public class BookingsController {
         double price = offersPricesServices.getFinalPrice(vehicle.id, dto.checkIn, dto.checkOut);
 
         BookingsModel model = new BookingsModel(dto.checkIn, dto.checkOut, price, dto.client, dto.email, vehicle);
-        bookingsService.save(model);
-        return model;
+        return bookingsService.save(model);
     }
 
 }

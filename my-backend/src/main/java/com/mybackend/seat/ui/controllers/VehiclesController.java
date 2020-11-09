@@ -28,6 +28,7 @@ public class VehiclesController {
 
     @GetMapping("/vehicles/{id}")
     VehiclesModel vehicleById(@PathVariable Long id) {
-        return vehiclesService.findById(id);
+        VehiclesModel model = vehiclesService.findById(id);
+        return model;
     }
 }

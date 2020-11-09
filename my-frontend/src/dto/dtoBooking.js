@@ -7,11 +7,3 @@ export class dtoBooking {
     this.checkOut = checkOut;
   }
 }
-
-export class dtoBookingPrices {
-  constructor(id_vehicle, checkIn, checkOut) {
-    this.id_vehicle = id_vehicle;
-    this.checkIn = checkIn;
-    this.checkOut = checkOut;
-  }
-}

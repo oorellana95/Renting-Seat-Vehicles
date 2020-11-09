@@ -113,6 +113,19 @@ span.small{
   /* Standard syntax */
 }
 
+.clear-filter[filter-color="black"] {
+  background: rgba(44, 44, 44, 0.2);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(0, 0, 0, 0.));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(3, 161, 224, 0.4));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(3, 161, 224, 0.4));
+  /* For Firefox 3.6 to 15 */
+  background: rgba(28,37,65,0.88);
+  /* Standard syntax */
+}
+
 .bg-black {
   background-color: #000 !important;
 }
@@ -1180,4 +1193,57 @@ span.small{
   -webkit-transform: scale(1) translateY(0);
   -ms-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
+}
+
+.ThankYou{
+  min-height: 85vh;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.ThankYou h1{
+  font-size: 150px;
+  line-height: 1.07em;
+  
+}
+.ThankYou p{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2em;
+}
+@media (max-width: 992px){
+.ThankYou h1{
+    font-size: 80px;
+    line-height: 1em;
+}
+.ThankYou p{
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.1em;
+}
+}
+
+.thanks_btn {
+  display: inline-block;
+  font-size: 14px;
+  color: white;
+  text-transform: capitalize;
+  padding: 12px 27px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.18em;
+  background:  rgba(3, 161, 224);
+
+}
+
+.thanks_btn:hover {
+  background: #fff;
+  color: #2c2c2c;
+  text-decoration: none;
 }

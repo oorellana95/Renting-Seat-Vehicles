@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Modal, ModalBody, Button, Row, Col } from "reactstrap";
+import React from "react";
+import { Modal, ModalBody, Row, Col } from "reactstrap";
 
 function ModalOffers(props) {
     return (
@@ -15,12 +15,12 @@ function ModalOffers(props) {
                                 {(props.data.offers) && props.data.offers.map(item => {
                                     return (
                                         <>
-                                            <li className="list-group-item d-flex justify-content-between align-items-center ">
+                                            <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center ">
                                                 <div>
                                                     <span className="bold">{item.name}</span> <br />
                                                     <span className="small">From {item.startDate} to {item.endDate}</span>
                                                 </div>
-                                                <span class="badge">{item.discountAppliedInRevenues}€</span>
+                                                <span className="badge">{item.discountAppliedInRevenues}€</span>
                                             </li>
                                         </>
                                     )
@@ -33,7 +33,7 @@ function ModalOffers(props) {
                     <span className="ml-3 font-italic ">
                         Discounts applied on {props.data.defaultTotalPrice}€
                     </span>
-                    <a className="cancel_now" type="button" onClick={() => props.functionVisibility(false)}>Close</a>
+                    <span className="cancel_now" type="button" onClick={() => props.functionVisibility(false)}>Close</span>
                 </div>
             </Modal>
         </>

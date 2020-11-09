@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
-import { Container, Row, Col, FormGroup, Button} from "reactstrap";
+import { Container, Row, Col, FormGroup, Button } from "reactstrap";
 import es from 'date-fns/locale/es';
 import "react-datepicker/dist/react-datepicker.css";
 import ModalOffers from 'components/ModalOffers';
 import ModalForm from 'components/ModalForm';
 import SummaryPricesList from 'components/SummaryPricesList';
-import { fetchFinalPriceAndOffers } from '../../actions/pricesActions';
+
+import { connect } from 'react-redux'
+
+import { fetchResetFinalPriceAndOffers, fetchFinalPriceAndOffers } from '../../actions/pricesActions';
 import { fetchPostBooking } from '../../actions/bookingsActions';
-import { dtoBookingPrices, dtoBooking } from '../../dto/dtoBooking';
-import { dtoOffersPrices } from '../../dto/dtoOffersPrices';
+import { dtoBooking } from '../../dto/dtoBooking';
+import { dtoToGetPrices } from '../../dto/dtoOffersPrices';
 
 
 registerLocale('es', es);
@@ -17,32 +20,52 @@ registerLocale('es', es);
 function DetailsFormSection(props) {
     const [startDate, setStartDate] = useState(null);
     const [endDate, setEndDate] = useState(null);
-    const [detailPrices, setDetailPrices] = useState(new dtoOffersPrices());
-    const [modalOffers, setModalOffers] = React.useState(false);
-    const [modalForm, setModalForm] = React.useState(false);
+    const [modalOffers, setModalOffers] = useState(false);
+    const [modalForm, setModalForm] = useState(false);
+
+    React.useEffect(() => {
+        props.resetPricesAndDiscounts();
+    }, []);
+
 
     const onChange = dates => {
         const [start, end] = dates;
         setStartDate(start);
         setEndDate(end);
 
-        if (start != startDate) {
-            setDetailPrices(new dtoOffersPrices());
+        if (start !== startDate) {
+            props.resetPricesAndDiscounts();
         }
         else if (end) {
-            let dto = new dtoBookingPrices(props.vehicle.id, startDate, end)
-            fetchFinalPriceAndOffers(dto).then(res => setDetailPrices(res.payload.object));
+            let dto = new dtoToGetPrices(props.vehicle.id, startDate, end)
+            props.getPricesAndDiscounts(dto);
         }
     };
 
     const bookNow = (client, email) => {
         let dto = new dtoBooking(props.vehicle.id, client, email, startDate, endDate)
-        fetchPostBooking(dto).then(res => alert(res));
+        props.postBooking(dto);
     }
+
+    function renderTablePrices() {
+        if (props.prices.isLoading) return <p>Loading details...</p>
+        if (props.prices.hasErrors) return <p>Unable to display prices. Error: {props.prices.error}</p>
+        return <>
+            <Row>
+                <SummaryPricesList totalDays={props.prices.object.totalDays} defaultTotalPrice={props.prices.object.defaultTotalPrice} offers={props.prices.object.offers} finalTotalDiscount={props.prices.object.finalTotalDiscount} finalTotalPrice={props.prices.object.finalTotalPrice} setModalOffers={setModalOffers} />
+            </Row>
+            <Row>
+                <Col className="d-flex justify-content-center align-self-center form-group mt-5 mb-4">
+                    <Button type="submit" disabled={!props.prices.object.finalTotalPrice} onClick={() => setModalForm(true)} className="boxed-btn">Book Now</Button>
+                </Col>
+            </Row>
+        </>
+    }
+
     return (
-        <>             
-            <ModalOffers modal={modalOffers} functionVisibility={setModalOffers} data={detailPrices}/>
-            <ModalForm modal={modalForm} functionVisibility={setModalForm} action={bookNow} data={detailPrices}/>
+        <>
+            <ModalOffers modal={modalOffers} functionVisibility={setModalOffers} data={props.prices.object} />
+            <ModalForm modal={modalForm} functionVisibility={setModalForm} action={bookNow} data={props.prices.object} />
 
             <div className="bg-light p-2 pt-4">
                 <Container>
@@ -50,34 +73,50 @@ function DetailsFormSection(props) {
                         <h3>Enter your details</h3>
                     </div>
                     <Row className="d-flex justify-content-center align-self-center">
-                            <FormGroup className="form-group">
-                                <DatePicker
-                                    className="form-control valid"
-                                    placeholderText="Check-in - Check-out"
-                                    startDate={startDate}
-                                    endDate={endDate}
-                                    onChange={onChange}
-                                    minDate={new Date()}
-                                    selectsRange
-                                    locale="es"
-                                    inline
-                                />
-                            </FormGroup>
+                        <FormGroup className="form-group">
+                            <DatePicker
+                                className="form-control valid"
+                                placeholderText="Check-in - Check-out"
+                                startDate={startDate}
+                                endDate={endDate}
+                                onChange={onChange}
+                                minDate={new Date()}
+                                selectsRange
+                                locale="es"
+                                inline
+                            />
+                        </FormGroup>
                     </Row>
                     <div className="section-title mt-2 mb-4">
                         <h4>Summary Prices</h4>
                     </div>
-                    <Row>     
-                        <SummaryPricesList totalDays={detailPrices.totalDays} defaultTotalPrice={detailPrices.defaultTotalPrice} offers={detailPrices.offers} finalTotalDiscount={detailPrices.finalTotalDiscount} finalTotalPrice={detailPrices.finalTotalPrice} setModalOffers={setModalOffers}/>
-                    </Row>
-                    <Row>
-                        <Col className="d-flex justify-content-center align-self-center form-group mt-5 mb-4">
-                            <Button type="submit" disabled={!detailPrices.finalTotalPrice} onClick={() => setModalForm(true)} className="boxed-btn">Book Now</Button>
-                        </Col>
-                    </Row>
+                    {renderTablePrices()}
+
                 </Container>
             </div>
         </>
     )
 }
-export default DetailsFormSection;
+
+
+function mapStateToProps(state) {
+    return (
+        {
+            vehicle: state.vehicle.object,
+            prices: state.prices,
+            booking: state.booking
+        }
+    );
+}
+
+function mapDispatchToProps(dispatch) {
+    return (
+        {
+            resetPricesAndDiscounts: () => fetchResetFinalPriceAndOffers()(dispatch),
+            getPricesAndDiscounts: (dto) => (fetchFinalPriceAndOffers(dto))(dispatch),
+            postBooking: (dto) => (fetchPostBooking(dto))(dispatch)
+        }
+    )
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DetailsFormSection)

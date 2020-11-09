@@ -20,8 +20,7 @@ class Vehicles extends React.Component {
       filter: {
         passengers: 1, 
         mobilityType: 0
-      },
-      mobilityTypes: this.props.mobilityTypes.mobilityTypes}
+      }}
   }
 
   componentDidMount() {
@@ -41,17 +40,17 @@ class Vehicles extends React.Component {
 
   renderVehicles() {
     if (this.props.vehicles.isLoading) return <p>Loading vehicles...</p>
-    if (this.props.vehicles.hasErrors) return <p>Unable to display vehicles. Error: {this.props.error}</p>
+    if (this.props.vehicles.hasErrors) return <p>Unable to display vehicles. Error: {this.props.vehicles.error}</p>
 
     let vehicles = this.getVehiclesFiltered();
-    if (vehicles.length == 0) return <p>No vehicles for search filters applied.</p>
+    if (vehicles.length === 0) return <p>No vehicles for search filters applied.</p>
     return vehicles.map(item => <VehicleCard vehicle={item} key={item.id} />);
   }
 
   getVehiclesFiltered(){
     return this.props.vehicles.objects.filter(item => 
       (+item.passengers >= this.state.filter.passengers) && 
-      (this.state.filter.mobilityType!=0 ? item.mobilityType.id == this.state.filter.mobilityType : true)
+      (this.state.filter.mobilityType!==0 ? item.mobilityType.id === this.state.filter.mobilityType : true)
       );
   }
 
@@ -64,10 +63,10 @@ class Vehicles extends React.Component {
   };
 
   renderMobilityTypes() {
-    if (this.props.isLoading) return <p>Loading types...</p>
-    if (this.props.hasErrors) return <p>Unable to display types. Error: {this.props.error}</p>
+    if (this.props.mobilityTypes.isLoading) return <p>Loading types...</p>
+    if (this.props.mobilityTypes.hasErrors) return <p>Unable to display types. Error: {this.props.mobilityTypes.error}</p>
 
-    return <CategorySelector items={this.state.mobilityTypes} itemAll={true} filterFunction ={this.filterVehiclesByMobilityTypes.bind(this)}  />
+    return <CategorySelector items={this.props.mobilityTypes.objects} itemAll={true} filterFunction ={this.filterVehiclesByMobilityTypes.bind(this)}  />
   }
 
   render() {

@@ -6,9 +6,9 @@ export const GET_MOBILITYTYPES_FAILURE = "GET_MOBILITYTYPES_FAILURE";
 
 export const getMobilityTypesPending = () => ({type: GET_MOBILITYTYPES_PENDING});
 
-export const getMobilityTypesSuccess = (mobilityTypes) => ({
+export const getMobilityTypesSuccess = (objects) => ({
     type: GET_MOBILITYTYPES_SUCCESS,
-    payload: mobilityTypes,
+    payload: objects,
 });
 
 export const getMobilityTypesFailure = (error) => ({

@@ -46,7 +46,7 @@ function AboutStaffSection() {
                 <Container>
                     <Row>
                         <Col md={6} className="mx-auto text-center mb-3 section-heading">
-                            <h2 class="mb-5">Fantastic 5</h2>
+                            <h2 className="mb-5">Fantastic 5</h2>
                         </Col>
                     </Row>
                     <Row className="justify-content-center">

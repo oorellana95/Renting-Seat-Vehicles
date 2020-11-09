@@ -9,14 +9,14 @@ function StaffCard(props) {
         <>
             <Col lg={4} md={6} className="mb-5">
                 <div className="staff-frame text-center">
-                    <a href="#" className="d-block mb-4 thumbnail">
-                        <img src={props.img} alt="Image" class="img-fluid"></img>
-                        </a>
+                    <span className="d-block mb-4 thumbnail">
+                        <img src={props.img} alt={"image " + props.name} className="img-fluid"></img>
+                    </span>
                     <div className="p-4">
                         <h3 className="heading mb-3">{props.name}</h3>
                         <p>{props.description}</p>
                         <div>
-                            <a style={{ display: props.hrefGit ? "" : "none" }, { margin: props.hrefGit && props.hrefLinkdIn  ? "0  1.5rem 0 0" : "" }} href={props.hrefGit}>
+                            <a style={{ display: props.hrefGit ? "" : "none", margin: props.hrefGit && props.hrefLinkdIn  ? "0  1.5rem 0 0" : "" }} href={props.hrefGit}>
                                 <FontAwesomeIcon icon={faGithub} color="#2b3137" size="2x" />
                             </a> 
                             <a style={{ display: props.hrefLinkdIn ? "" : "none" }} href={props.hrefLinkdIn}>

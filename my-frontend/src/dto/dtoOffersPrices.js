@@ -8,16 +8,10 @@ export class dtoOffersPrices {
   }
 }
 
-export class dtoOffers {
-  constructor(id, name, description, startDate, endDate, cumulative, type, quantity, discountAppliedInRevenues) {
-    this.id = id;
-    this.name = name;
-    this.id = description;
-    this.startDatet = startDate;
-    this.endDate = endDate;
-    this.cumulative = cumulative;
-    this.type = type;
-    this.quantity = quantity;
-    this.discountAppliedInRevenues = discountAppliedInRevenues;
+export class dtoToGetPrices {
+  constructor(id_vehicle, checkIn, checkOut) {
+    this.id_vehicle = id_vehicle;
+    this.checkIn = checkIn;
+    this.checkOut = checkOut;
   }
 }

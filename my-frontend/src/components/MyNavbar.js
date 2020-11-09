@@ -62,7 +62,7 @@ function MyNavbar(props) {
             </NavbarBrand>
 
             <UncontrolledTooltip target="#navbar-brand">
-              By Deejay <a href="#"> @Miguel</a> 
+              By Deejay @Miguel
             </UncontrolledTooltip>
 
             <button
@@ -106,18 +106,6 @@ function MyNavbar(props) {
                 <NavLink to="/contact" tag={Link}>
                   Contact
                 </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  to="/signin" tag={Link}
-                  id="signup-tooltip"
-                >
-                  <i className="fa fa-user"></i>
-                  <p className="d-lg-none d-xl-none">Sign Up</p>
-                </NavLink>
-                <UncontrolledTooltip target="#signup-tooltip">
-                  Sign in!
-                </UncontrolledTooltip>
               </NavItem>
             </Nav>
           </Collapse>

@@ -5,19 +5,6 @@ import { Container } from "reactstrap";
 function Header(props) {
   let pageHeader = React.createRef();
 
-  /*React.useEffect(() => {
-      if (window.innerWidth > 991 && pageHeader.current.style!==null) {
-        const updateScroll = () => {
-          let windowScrollTop = window.pageYOffset / 3;
-          pageHeader.current.style.transform = "translate3d(0," + windowScrollTop + "px,0)";
-        };
-        window.addEventListener("scroll", updateScroll);
-        return function cleanup() {
-          window.removeEventListener("scroll", updateScroll);
-        };
-      }
-  });*/
-
   return (
     <>
       <div className="page-header clear-filter" filter-color={props.filterColor}>
@@ -40,7 +27,7 @@ function Header(props) {
           </div>
           <h6 className="category category-absolute">
             Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
+            <a href="http://invisionapp.com/?ref=creativetim" rel="noopener noreferrer" target="_blank">
               <img
                 alt="..."
                 className="invision-logo"
@@ -51,6 +38,7 @@ function Header(props) {
             <a
               href="https://www.creative-tim.com?ref=nukr-index-header"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 alt="..."

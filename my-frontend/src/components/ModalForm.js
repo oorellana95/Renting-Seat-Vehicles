@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Modal, ModalBody, Row, Col, FormGroup, Input, Form } from "reactstrap";
+import { useHistory } from "react-router-dom";
 
 function ModalForm(props) {
+    const history = useHistory()
     const [client, setClient] = useState("");
     const [email, setEmail] = useState("");
     const [confirmEmail, setConfirmEmail] = useState("");
@@ -34,7 +36,7 @@ function ModalForm(props) {
            let lastAtPos = email.lastIndexOf('@');
            let lastDotPos = email.lastIndexOf('.');
 
-           if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf('@@') == -1 && lastDotPos > 2 && (email.length - lastDotPos) > 2)) {
+           if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf('@@') === -1 && lastDotPos > 2 && (email.length - lastDotPos) > 2)) {
               formIsValid = false;
               errors["email"] = "Email is not valid";
             }
@@ -45,7 +47,7 @@ function ModalForm(props) {
         errors["confirmEmail"] = "Cannot be empty";
      }
 
-     else if(email != confirmEmail){
+     else if(email !== confirmEmail){
         formIsValid = false;
         errors["confirmEmail"] = "Does not match email";
     } 
@@ -58,7 +60,7 @@ function ModalForm(props) {
         if(handleValidation()){
             props.functionVisibility(false);
             props.action(client,email);
-            alert("Form submitted");
+            history.push("/thankyou");
         }else{
            alert("Form has errors.")
         }
@@ -96,8 +98,8 @@ function ModalForm(props) {
                 </Form>
                 </ModalBody>
                 <div className="modal-footer mt-2">
-                    <a className="cancel_now" type="button" onClick={() => (props.functionVisibility(false), setErrors({}))}>Close</a>
-                    <a className="book_now float-right" type="button" onClick={() => bookNowSubmit()}>Book now!</a>
+                    <span className="cancel_now" type="button" onClick={() => (props.functionVisibility(false), setErrors({}))}>Close</span>
+                    <span className="book_now float-right" type="button" onClick={() => bookNowSubmit()}>Book now!</span>
                 </div>
             </Modal>
         </>

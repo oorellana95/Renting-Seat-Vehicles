@@ -10,7 +10,7 @@ public interface BookingsService {
 
     List<BookingsModel> findAll();
 
-    void save(BookingsModel model);
+    BookingsModel save(BookingsModel model);
 
     void deleteById(long id);
 

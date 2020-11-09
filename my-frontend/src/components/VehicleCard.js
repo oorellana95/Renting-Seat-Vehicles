@@ -30,7 +30,7 @@ function VehicleCard(props) {
                         {props.detail ? (
                             <>
                                 <Col sm={6} xs={12}>
-                                    <span href="#" className="price float-right mr-5">Average price: {vehicle.pricePerDay} € / day</span>
+                                    <span className="price float-right mr-5">Average price: {vehicle.pricePerDay} € / day</span>
                                 </Col>
                             </>
                         ) : (
@@ -40,7 +40,7 @@ function VehicleCard(props) {
                                     </Col>
                                     <Col sm={3} xs={6} className="pr-4">
                                         <Link to={"vehicle/" + vehicle.id}>
-                                            <a className="book_now float-right">Book now!</a>
+                                            <span type="button" className="book_now float-right">Book now!</span>
                                         </Link>
                                     </Col>
                                 </>

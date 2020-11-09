@@ -25,6 +25,7 @@ class Footer extends React.Component {
               <p>Listen the best songs</p>
               <a onClick={this.handleClick.bind(this)}
                 href={this.state.random}
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 <img
@@ -51,11 +52,11 @@ class Footer extends React.Component {
               
               © {new Date().getFullYear()}, All rights reserved to{" "}
 
-              <a href="https://github.com/Z-devs" target="_blank"> @Z Devs </a>
+              <a href="https://github.com/Z-devs" rel="noopener noreferrer" target="_blank"> @Z Devs </a>
 
               {" "}| This webside is made by: {" "}
 
-              <a href="https://github.com/oorellana95" target="_blank">@Oscar</a>
+              <a href="https://github.com/oorellana95" rel="noopener noreferrer" target="_blank">@Oscar</a>
             
             </div>
           </Row>

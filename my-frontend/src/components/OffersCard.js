@@ -5,8 +5,8 @@ function OffersCard(props) {
     return (
         <>
             <Col xl={4} md={4}>
-                <div class="single_offers">
-                    <div class="about_thumb">
+                <div className="single_offers">
+                    <div className="about_thumb">
                         <img src={props.img} alt=""></img>
                     </div>
                     <h3>Up to 35% savings on Club rooms and Suites</h3>

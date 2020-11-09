@@ -27,7 +27,7 @@ function AboutBettingSection() {
                 <Container className="p-5">
                     <Row>
                         <Col md={6} className="mx-auto text-center mb-3 section-heading">
-                            <h2 class="mb-5">Betting on electricity</h2>
+                            <h2 className="mb-5">Betting on electricity</h2>
                         </Col>
                     </Row>
                     <Carousel items={items} />

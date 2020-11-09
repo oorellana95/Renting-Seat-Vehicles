@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // core components
 import MyNavbar from "components/MyNavbar.js";
 import Footer from "components/Footer.js";
@@ -10,21 +10,24 @@ import { connect } from 'react-redux'
 
 //Diferentes formas de crear componentes
 function DetailsVehicle(props) {
-    const vehicle = props.vehicle;
 
     React.useEffect(() => {
         props.getVehicleById(props.match.params.id);
-        
-        document.body.classList.add("index-page");
-        document.body.classList.add("sidebar-collapse");
-        document.documentElement.classList.remove("nav-open");
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
-        return function cleanup() {
-            document.body.classList.remove("index-page");
-            document.body.classList.remove("sidebar-collapse");
-        };
     }, [props.match.params.id]);
+
+    function renderDetails() {
+        if (props.vehicle.isLoading) return <p>Loading details...</p>
+        if (props.vehicle.hasErrors) return <p>Unable to display details. Error: {props.vehicle.error}</p>
+
+        return <Row>
+            <Col md={8}>
+                <VehicleCard vehicle={props.vehicle.object} detail={true} />
+            </Col>
+            <Col md={4}>
+                <DetailsFormSection vehicle={props.vehicle.object} />
+            </Col>
+        </Row>
+    }
 
     return (
         <>
@@ -35,17 +38,10 @@ function DetailsVehicle(props) {
                         <Container>
                             <Row>
                                 <Col md={6} className="mx-auto text-center mb-3 section-heading">
-                                    <h2 class="mb-5">Your vehicle</h2>
+                                    <h2 className="mb-5">Your vehicle</h2>
                                 </Col>
                             </Row>
-                            <Row>
-                            <Col md={8}>
-                                {vehicle && <VehicleCard vehicle={vehicle} detail={true} />}
-                            </Col>
-                            <Col md={4}>
-                                {vehicle && <DetailsFormSection vehicle={vehicle} />}
-                            </Col>
-                            </Row>
+                            {renderDetails()}
                         </Container>
                     </div>
                 </div>
@@ -55,12 +51,19 @@ function DetailsVehicle(props) {
     );
 }
 
-const mapStateToProps = state => ({
-    vehicle: state.vehicle.object
-  })
-  
-  const mapDispatchToProps = dispatch => ({
-    getVehicleById: (id) => (fetchVehicleById(id)) (dispatch)
-  })
-  
+function mapStateToProps(state) {
+    return (
+        {
+            vehicle: state.vehicle
+        }
+    );
+}
+
+function mapDispatchToProps(dispatch) {
+    return (
+        {
+            getVehicleById: (id) => (fetchVehicleById(id))(dispatch)
+        }
+    )
+};
 export default connect(mapStateToProps, mapDispatchToProps)(DetailsVehicle)

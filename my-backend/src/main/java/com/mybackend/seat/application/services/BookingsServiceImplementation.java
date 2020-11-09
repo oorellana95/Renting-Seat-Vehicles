@@ -42,8 +42,10 @@ public class BookingsServiceImplementation implements BookingsService{
     }
 
     @Override
-    public void save(BookingsModel model) {
-        repository.save(factory.createEntity(model));
+    public BookingsModel save(BookingsModel model) {
+        BookingsEntity entity = repository.save(factory.createEntity(model));
+        BookingsModel updatedModel = factory.createModel(entity);
+        return updatedModel;
     }
 
     @Override
