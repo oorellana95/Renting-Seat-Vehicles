@@ -31,7 +31,7 @@ function ModalOffers(props) {
                 </ModalBody>
                 <div className="modal-footer mt-2">
                     <span className="ml-3 font-italic ">
-                        Discounts applied on {props.data.defaultTotalPrice}€
+                        Discounts applied on daily prices
                     </span>
                     <span className="cancel_now" type="button" onClick={() => props.functionVisibility(false)}>Close</span>
                 </div>

@@ -18,8 +18,7 @@ function DetailsVehicle(props) {
     function renderDetails() {
         if (props.vehicle.isLoading) return <p>Loading details...</p>
         if (props.vehicle.hasErrors) return <p>Unable to display details. Error: {props.vehicle.error}</p>
-
-        return <Row>
+        if (props.vehicle.object.id) return <Row>
             <Col md={8}>
                 <VehicleCard vehicle={props.vehicle.object} detail={true} />
             </Col>
@@ -27,6 +26,7 @@ function DetailsVehicle(props) {
                 <DetailsFormSection vehicle={props.vehicle.object} />
             </Col>
         </Row>
+        else return <p>There is no vehicle for that reference</p>
     }
 
     return (

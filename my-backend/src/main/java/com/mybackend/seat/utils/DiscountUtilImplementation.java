@@ -1,7 +1,7 @@
 package com.mybackend.seat.utils;
 
 import com.mybackend.seat.application.models.OffersModel;
-import com.mybackend.seat.ui.dto.OffersPricesDTO;
+import com.mybackend.seat.api.dto.OffersPricesDTO;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;

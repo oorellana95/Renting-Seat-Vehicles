@@ -16,12 +16,13 @@ function CategorySelector(props) {
                         )}
                         {(props.items || !props.itemAll) && props.items.map(item => {
                             return (
-                                <li className="d-flex" key={item.id} id={"li" + item.id} onClick={() => { setValue(item.id); props.filterFunction(item.id) }}>
+                                <li className="d-flex" type="button" key={item.id} id={"li" + item.id} onClick={() => { setValue(item.id); props.filterFunction(item.id) }}>
                                     <p className={(val === item.id ? 'active' : '')}>{item.name}</p>
                                 </li>
                             )
                         })}
                     </ul>
+                    {props.error && <p>{props.error}</p>}
                 </aside>
             </div>
         </>

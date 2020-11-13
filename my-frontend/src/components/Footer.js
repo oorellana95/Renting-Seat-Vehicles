@@ -14,7 +14,7 @@ class Footer extends React.Component {
         <Container>
           <Row>
             <Col lg={4} xs={12}>
-              <h4>POM dreams</h4>
+              <h4>In Mova Emotions</h4>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptatem quisquam, labore nesciunt modi officiis?
             <br /><br />
             Dicta necessitatibus neque perferendis aperiam iste sint cum dolor fugiat nisi temporibus aut!
@@ -30,7 +30,7 @@ class Footer extends React.Component {
               >
                 <img
                   alt="..."
-                  className="creative-tim-logo"
+                  className="play-music"
                   src={require("assets/img/music.png")}
                 ></img>
               </a>

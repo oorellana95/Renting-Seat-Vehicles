@@ -58,11 +58,11 @@ function MyNavbar(props) {
               target="_blank"
               id="navbar-brand"
             >
-              RENTING S.C
+              IN MOVA
             </NavbarBrand>
 
             <UncontrolledTooltip target="#navbar-brand">
-              By Deejay @Miguel
+              Felicità on the way
             </UncontrolledTooltip>
 
             <button

@@ -10,34 +10,39 @@ function AboutStaffSection() {
             description: 'He is the fastest typing code and looking for things on the internet.',
             hrefGit: 'https://github.com/orgs/Z-devs/people/hiitoos',
             hrefLinkdIn: 'https://www.linkedin.com/in/adrian-hitos-jimenez-870231118/',
-            img: require("assets/img/person_1.jpg")
+            img: require("assets/img/ahitos.jpg"),
+            flipped: require("assets/mp4/flipped_hitos.mp4")
         },
         {
             name: 'Oscar Lara',
             description: 'An exceptional designer with awesome ideas and very good logic.',
             hrefGit: 'https://github.com/orgs/Z-devs/people/roskou',
             hrefLinkdIn: 'https://www.linkedin.com/in/oscar-lara-de-liz-94a01319a/',
-            img: require("assets/img/person_1.jpg")
+            img: require("assets/img/olara.jpg"),
+            flipped: require("assets/mp4/flipped_lara.mp4")
         },
         {
             name: 'Oscar Orellana',
-            description: 'A monkey, the best one removing code and destroying repositories.',
+            description: 'If you need to face a challenge in an organized way, call him!',
             hrefGit: 'https://github.com/oorellana95',
             hrefLinkdIn: 'https://www.linkedin.com/in/oscar-orellana-gonzalez-15535b16a/',
-            img: require("assets/img/person_1.jpg")
+            img: require("assets/img/oorellana.jpg"),
+            flipped: require("assets/mp4/flipped_orellana.mp4")
         },
         {
             name: 'Miguel Pablos',
             description: 'If you have any doubt you can ask him! The best coder by far.',
             hrefGit: 'https://github.com/orgs/Z-devs/people/leguim-repo',
             hrefLinkdIn: 'https://www.linkedin.com/in/miguel-angel-pablos-moreno-38203a153/',
-            img: require("assets/img/person_1.jpg")
+            img: require("assets/img/mpablos.jpg"),
+            flipped: require("assets/mp4/flipped_pablos.mp4")
         },
         {
             name: 'Pablo Pardo',
             description: 'The best one making a team, the most constant and hard-working.',
             hrefGit: 'https://github.com/orgs/Z-devs/people/Pablopgcode',
-            img: require("assets/img/person_1.jpg")
+            img: require("assets/img/ppardo.jpg"),
+            flipped: require("assets/mp4/flipped_pardo.mp4")
         }]
 
     return (
@@ -52,7 +57,7 @@ function AboutStaffSection() {
                     <Row className="justify-content-center">
                         {staff.map(item => {
                             return (
-                                <StaffCard name={item.name} description={item.description} hrefGit={item.hrefGit} hrefLinkdIn={item.hrefLinkdIn}  img={item.img}  />
+                                <StaffCard name={item.name} description={item.description} hrefGit={item.hrefGit} hrefLinkdIn={item.hrefLinkdIn}  img={item.img} flipped={item.flipped}  />
                             )
                         })}
                     </Row>

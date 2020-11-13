@@ -11,11 +11,12 @@ function BrandsSection() {
                             <div className="info">
                                 <div className="section-title mb-20px">
                                     <span>About the brands</span>
-                                    <h3>A Luxuries Hotel with Nature</h3>
+                                    <h3>Seat and Cupra, a step beyond sporty style</h3>
                                 </div>
-                                <p>Suscipit libero pretium nullam potenti. Interdum, blandit phasellus consectetuer dolor ornare
+                                <p> Brands that are born from confluences, movement, streets that vibrate and silence. 
+                                    Suscipit libero pretium nullam potenti. Interdum, blandit phasellus dolor ornare
                                 dapibus enim ut tincidunt rhoncus tellus sollicitudin pede nam maecenas, dolor sem. Neque
-                            sollicitudin enim. Dapibus lorem feugiat facilisi faucibus et. Rhoncus.</p>
+                            sollicitudin enim.</p>
                                 <a href="https://www.seat.es/" rel="noopener noreferrer" target="_blank" className="line-button">Learn More</a>
                             </div>
                         </Col>

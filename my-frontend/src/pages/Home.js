@@ -20,6 +20,7 @@ function Home () {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+  
   return (
     <>
       <MyNavbar navbarSolidColor="black"/>

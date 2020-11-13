@@ -20,33 +20,28 @@ function Header(props) {
             <img
               alt="..."
               className="n-logo"
-              src={require("assets/img/now-logo.png")}
+              src={require("assets/img/move-logo.png")}
             ></img>
             <h1 className="h1-seo">{props.title}</h1>
             <h3>{props.description}</h3>
           </div>
           <h6 className="category category-absolute">
             Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" rel="noopener noreferrer" target="_blank">
+            <span>
               <img
                 alt="..."
-                className="invision-logo"
-                src={require("assets/img/invision-white-slim.png")}
+                className="interreto-logo"
+                src={require("assets/img/interreto.png")}
               ></img>
-            </a>
+            </span>
             . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <span>
               <img
                 alt="..."
-                className="creative-tim-logo"
-                src={require("assets/img/creative-tim-white-slim2.png")}
+                className="devs-team-logo"
+                src={require("assets/img/devs-team.png")}
               ></img>
-            </a>
-            .
+            </span>
           </h6>
         </Container>
       </div>

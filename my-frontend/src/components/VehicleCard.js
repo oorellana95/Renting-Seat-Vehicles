@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 function VehicleCard(props) {
     const vehicle = props.vehicle;
+    console.log(props.vehicle);
 
     return (
         <>

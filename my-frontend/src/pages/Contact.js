@@ -21,9 +21,9 @@ function Contact () {
   });
   return (
     <>
-      <MyNavbar navbarSolidColor="purple"/>
+      <MyNavbar navbarSolidColor="grey"/>
       <div className="wrapper">
-        <Header routeImage = {require("assets/img/vehicles-header.jpg")} title="Get In Touch" description = "We are here for you" filterColor="purple"/>
+        <Header routeImage = {require("assets/img/contact-header.jpg")} title="Get In Touch" description = "We are here for you" filterColor="orange"/>
         <div className="main">
           <ContactMapSection/>
           <GetInTouchSection/>

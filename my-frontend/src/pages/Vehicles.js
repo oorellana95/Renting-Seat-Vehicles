@@ -64,7 +64,7 @@ class Vehicles extends React.Component {
 
   renderMobilityTypes() {
     if (this.props.mobilityTypes.isLoading) return <p>Loading types...</p>
-    if (this.props.mobilityTypes.hasErrors) return <p>Unable to display types. Error: {this.props.mobilityTypes.error}</p>
+    if (this.props.mobilityTypes.hasErrors) return <><CategorySelector itemAll={true} filterFunction ={this.filterVehiclesByMobilityTypes.bind(this)} error={`Unable to display more types. Error: ${this.props.mobilityTypes.error}`}/></>
 
     return <CategorySelector items={this.props.mobilityTypes.objects} itemAll={true} filterFunction ={this.filterVehiclesByMobilityTypes.bind(this)}  />
   }

@@ -9,11 +9,11 @@ function OffersCard(props) {
                     <div className="about_thumb">
                         <img src={props.img} alt=""></img>
                     </div>
-                    <h3>Up to 35% savings on Club rooms and Suites</h3>
+                    <h3>{props.title}</h3>
                     <ul>
-                        <li>Luxaries condition</li>
-                        <li>3 Adults & 2 Children size</li>
-                        <li>Sea view side</li>
+                        <li>{props.point1}</li>
+                        <li>{props.point2}</li>
+                        <li>{props.point3}</li>
                     </ul>
                 </div>
             </Col>

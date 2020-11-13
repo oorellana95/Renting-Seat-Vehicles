@@ -2,18 +2,14 @@ package com.mybackend.seat.application.services;
 
 import com.mybackend.seat.application.domain.entities.OffersEntity;
 import com.mybackend.seat.application.domain.entities.VehiclesEntity;
-import com.mybackend.seat.application.domain.repositories.OffersRepository;
 import com.mybackend.seat.application.domain.repositories.VehiclesRepository;
-import com.mybackend.seat.application.factories.OffersFactory;
 import com.mybackend.seat.application.models.OffersModel;
-import com.mybackend.seat.ui.dto.OffersPricesDTO;
+import com.mybackend.seat.api.dto.OffersPricesDTO;
 import com.mybackend.seat.utils.DiscountUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.stream.Collectors;
 
 //--- Service ----------------------------------------------------------
 @Service
