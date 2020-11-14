@@ -13,6 +13,7 @@ function DetailsVehicle(props) {
 
     React.useEffect(() => {
         props.getVehicleById(props.match.params.id);
+        window.scrollTo(0, 0);
     }, [props.match.params.id]);
 
     function renderDetails() {

@@ -15,6 +15,12 @@ public class MobilitytypesModel {
     public MobilitytypesModel() {
     }
 
+    public MobilitytypesModel(long id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+
     //--- Getters & Setters ----------------------------------------
     public long getId() {
         return id;

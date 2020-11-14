@@ -2,16 +2,12 @@ com\mybackend\seat\application\domain\entities\VehiclesEntity.class
 com\mybackend\seat\application\domain\entities\BookingsEntity.class
 com\mybackend\seat\application\domain\entities\OffersEntity.class
 com\mybackend\seat\application\domain\repositories\OffersRepository.class
-com\mybackend\seat\ui\controllers\VehiclesController.class
 com\mybackend\seat\application\factories\MobilitytypesFactory.class
-com\mybackend\seat\ui\controllers\BookingsController.class
 com\mybackend\seat\utils\DiscountUtilImplementation.class
-com\mybackend\seat\ui\dto\BookingsDTO.class
 com\mybackend\seat\application\services\BookingsServiceImplementation.class
 com\mybackend\seat\application\factories\BookingsFactory.class
 com\mybackend\seat\application\domain\repositories\VehiclesRepository.class
 com\mybackend\seat\application\models\BookingsModel.class
-com\mybackend\seat\ui\controllers\MobilitytypesController.class
 com\mybackend\seat\application\services\VehiclesService.class
 com\mybackend\seat\application\services\VehiclesServiceImplementation.class
 com\mybackend\seat\application\services\MobilitytypesService.class
@@ -26,5 +22,4 @@ com\mybackend\seat\application\services\BookingsService.class
 com\mybackend\seat\application\domain\repositories\BookingsRepository.class
 com\mybackend\seat\utils\DiscountUtil.class
 com\mybackend\seat\application\factories\OffersFactory.class
-com\mybackend\seat\ui\configuration\MyConfiguration.class
 com\mybackend\seat\application\factories\VehiclesFactory.class

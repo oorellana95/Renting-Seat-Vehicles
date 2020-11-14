@@ -17,6 +17,15 @@ public class OffersModel {
     public OffersModel() {
     }
 
+    //Used for testing
+    public OffersModel(long id, Date startDate, Date endDate, String type, double quantity) {
+        this.id = id;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.type = type;
+        this.quantity = quantity;
+    }
+
     //--- Getters & Setters ----------------------------------------
     public long getId() {
         return id;

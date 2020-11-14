@@ -21,16 +21,16 @@ public class DiscountUtilImplementation implements DiscountUtil {
     @Override
     public long getDaysToApplyOffer(Date checkIn, Date checkOut, Date startOffer, Date endOffer){
         long days = 0;
-        if (startOffer.before(checkIn) && checkOut.before(endOffer)){
+        if (!startOffer.after(checkIn) && !checkOut.after(endOffer)){
             days = getDaysBetweenTwoDates(checkIn, checkOut);
         }
-        else if (startOffer.before(checkIn) && checkIn.before(endOffer) && endOffer.before(checkOut)){
+        else if (!startOffer.after(checkIn) && !checkIn.after(endOffer) && !endOffer.after(checkOut)){
             days = getDaysBetweenTwoDates(checkIn, endOffer);
         }
-        else if (checkIn.before(startOffer) && endOffer.before(checkOut)){
+        else if (!checkIn.after(startOffer) && !endOffer.after(checkOut)){
             days = getDaysBetweenTwoDates(startOffer, endOffer);
         }
-        else if (checkIn.before(startOffer) && startOffer.before(checkOut) && checkOut.before(endOffer)){
+        else if (!checkIn.after(startOffer) && !startOffer.after(checkOut) && !checkOut.after(endOffer)){
             days = getDaysBetweenTwoDates(startOffer, checkOut);
         }
         return days;
@@ -51,24 +51,21 @@ public class DiscountUtilImplementation implements DiscountUtil {
         double bestDiscount = 0;
         OffersModel bestOffer = new OffersModel();
 
-        for (OffersModel offer : offers)
-        {
-            double currentDiscount = 0;
-            long days = getDaysToApplyOffer(checkIn, checkOut, offer.getStartDate(), offer.getEndDate());
+            for (OffersModel offer : offers) {
+                double currentDiscount = 0;
+                long days = getDaysToApplyOffer(checkIn, checkOut, offer.getStartDate(), offer.getEndDate());
 
-            if ((offer.getType().equals("absolute"))){
-                currentDiscount = absoluteDiscountInRevenues(days, offer.getQuantity());
-            }
+                if ((offer.getType().equals("absolute"))) {
+                    currentDiscount = absoluteDiscountInRevenues(days, offer.getQuantity());
+                } else if ((offer.getType().equals("proportional"))) {
+                    currentDiscount = proportionalDiscountInRevenues(days, pricePerDay, offer.getQuantity());
+                }
 
-            else if ((offer.getType().equals("proportional"))){
-                currentDiscount = proportionalDiscountInRevenues(days, pricePerDay, offer.getQuantity());
+                if (currentDiscount > bestDiscount) {
+                    bestDiscount = currentDiscount;
+                    bestOffer = offer;
+                }
             }
-
-            if (currentDiscount > bestDiscount){
-                bestDiscount = currentDiscount;
-                bestOffer = offer;
-            }
-        }
         bestOffer.discountAppliedInRevenues = bestDiscount;
 
         //No me gusta aqui
