@@ -20,27 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cd44f2f-a731-4cf0-9d55-d8c019a11e2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/application/controllers/MobilityTypesControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/application/controllers/VehiclesControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/application/services/BookingServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/utils/DiscountUtilTests/GeneralDiscountUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/utils/DiscountUtilTests/GetBestNonCumulativeOfferTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/utils/DiscountUtilTests/GetCumulativeOffersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/utils/DiscountUtilTests/GetDaysToApplyOfferTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/my-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/MobilitytypesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/MobilitytypesModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/OffersModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/application/models/OffersModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/utils/DiscountUtilImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mybackend/seat/utils/DiscountUtilImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/controllers/BookingsControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/controllers/MainControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/MobilitytypesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/MobilitytypesModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/OffersModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/application/models/OffersModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/application/controllers/VehiclesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/application/controllers/VehiclesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/utils/DiscountUtilTests/GeneralDiscountUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mybackend/seat/utils/DiscountUtilTests/GeneralDiscountUtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mybackend/seat/utils/DiscountUtilImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mybackend/seat/utils/DiscountUtilImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../my-frontend/src/pages/DetailsVehicle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../my-frontend/src/pages/DetailsVehicle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Geekhubs/SeatCodeSpring" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37126437" />
@@ -112,7 +96,23 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VehiclesControllerTest">
+  <component name="RunManager" selected="JUnit.com.mybackend.seat.utils.DiscountUtilTests in my-backend">
+    <configuration name="GeneralDiscountUtilTest.GetFinalPriceShouldReturn0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mybackend.seat.utils.DiscountUtilTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mybackend.seat.utils.DiscountUtilTests" />
+      <option name="MAIN_CLASS_NAME" value="com.mybackend.seat.utils.DiscountUtilTests.GeneralDiscountUtilTest" />
+      <option name="METHOD_NAME" value="GetFinalPriceShouldReturn0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MobilityTypesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="my-backend" />
       <extension name="coverage">
@@ -124,22 +124,6 @@
       <option name="PACKAGE_NAME" value="com.mybackend.seat.application.controllers" />
       <option name="MAIN_CLASS_NAME" value="com.mybackend.seat.application.controllers.MobilityTypesControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MobilityTypesControllerTest.ShouldReturnOkWhenVisitVehicles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="my-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybackend.seat.application.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mybackend.seat.application.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.mybackend.seat.application.controllers.MobilityTypesControllerTest" />
-      <option name="METHOD_NAME" value="ShouldReturnOkWhenVisitVehicles" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,22 +144,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MobilityTypesControllerTest.TestGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="my-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybackend.seat.application.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mybackend.seat.application.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.mybackend.seat.application.controllers.MobilityTypesControllerTest" />
-      <option name="METHOD_NAME" value="TestGet" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="VehiclesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="my-backend" />
       <extension name="coverage">
@@ -191,6 +159,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.mybackend.seat.utils.DiscountUtilTests in my-backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="my-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mybackend.seat.utils.DiscountUtilTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mybackend.seat.utils.DiscountUtilTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeatRentingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="my-backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mybackend.seat.SeatRentingApplication" />
@@ -200,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.mybackend.seat.utils.DiscountUtilTests in my-backend" />
+        <item itemvalue="JUnit.GeneralDiscountUtilTest.GetFinalPriceShouldReturn0" />
         <item itemvalue="JUnit.VehiclesControllerTest" />
         <item itemvalue="JUnit.MobilityTypesControllerTest" />
         <item itemvalue="JUnit.MobilityTypesControllerTest.ShouldReturnThreeValues" />
-        <item itemvalue="JUnit.MobilityTypesControllerTest.ShouldReturnOkWhenVisitVehicles" />
-        <item itemvalue="JUnit.MobilityTypesControllerTest.TestGet" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +218,8 @@
       <workItem from="1605084823978" duration="5059000" />
       <workItem from="1605169454181" duration="6798000" />
       <workItem from="1605271786838" duration="2654000" />
-      <workItem from="1605347340689" duration="14352000" />
+      <workItem from="1605347340689" duration="14593000" />
+      <workItem from="1605434057086" duration="423000" />
     </task>
     <servers />
   </component>
@@ -260,6 +243,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="121" y="0" key="#Project_Structure/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1603701397599" />
+    <state x="243" y="0" key="#VehiclesControllerTest" timestamp="1605434136614">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="243" y="0" key="#VehiclesControllerTest/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605434136614" />
     <state x="446" y="42" key="#com.intellij.ide.util.MemberChooser" timestamp="1605361051046">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -289,6 +276,10 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="690" y="-813" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1604078624151" />
+    <state x="243" y="0" key="#com.mybackend.seat.utils.DiscountUtilTests_in_my-backend" timestamp="1605434349417">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="243" y="0" key="#com.mybackend.seat.utils.DiscountUtilTests_in_my-backend/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605434349417" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1605353159838">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -296,80 +287,80 @@
     <state x="632" y="-933" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095148241" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605353159838" />
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604228684758" />
-    <state width="1237" height="237" key="GridCell.Tab.0.bottom" timestamp="1605361397776">
+    <state width="1237" height="101" key="GridCell.Tab.0.bottom" timestamp="1605434479680">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="61" key="GridCell.Tab.0.bottom/0.0.1280.680/-961.-2160.2560.1400@0.0.1280.680" timestamp="1604329219314" />
     <state width="1617" height="281" key="GridCell.Tab.0.bottom/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474485" />
     <state width="983" height="320" key="GridCell.Tab.0.bottom/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018584" />
     <state width="1617" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188354" />
-    <state width="1237" height="237" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361397776" />
+    <state width="1237" height="101" key="GridCell.Tab.0.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605434479680" />
     <state width="845" height="300" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="1057" height="213" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605258991119" />
-    <state width="1237" height="237" key="GridCell.Tab.0.center" timestamp="1605361397776">
+    <state width="1237" height="101" key="GridCell.Tab.0.center" timestamp="1605434479679">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="61" key="GridCell.Tab.0.center/0.0.1280.680/-961.-2160.2560.1400@0.0.1280.680" timestamp="1604329219313" />
     <state width="1617" height="281" key="GridCell.Tab.0.center/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474484" />
     <state width="983" height="320" key="GridCell.Tab.0.center/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018583" />
     <state width="1617" height="160" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188354" />
-    <state width="1237" height="237" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361397776" />
+    <state width="1237" height="101" key="GridCell.Tab.0.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605434479679" />
     <state width="845" height="300" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="1057" height="213" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605258991119" />
-    <state width="1237" height="237" key="GridCell.Tab.0.left" timestamp="1605361397775">
+    <state width="1237" height="101" key="GridCell.Tab.0.left" timestamp="1605434479679">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="61" key="GridCell.Tab.0.left/0.0.1280.680/-961.-2160.2560.1400@0.0.1280.680" timestamp="1604329219313" />
     <state width="1617" height="281" key="GridCell.Tab.0.left/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474484" />
     <state width="983" height="320" key="GridCell.Tab.0.left/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018583" />
     <state width="1617" height="160" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188354" />
-    <state width="1237" height="237" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361397775" />
+    <state width="1237" height="101" key="GridCell.Tab.0.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605434479679" />
     <state width="845" height="300" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231016" />
     <state width="1057" height="213" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605258991119" />
-    <state width="1237" height="237" key="GridCell.Tab.0.right" timestamp="1605361397776">
+    <state width="1237" height="101" key="GridCell.Tab.0.right" timestamp="1605434479680">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="61" key="GridCell.Tab.0.right/0.0.1280.680/-961.-2160.2560.1400@0.0.1280.680" timestamp="1604329219314" />
     <state width="1617" height="281" key="GridCell.Tab.0.right/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474484" />
     <state width="983" height="320" key="GridCell.Tab.0.right/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018583" />
     <state width="1617" height="160" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188354" />
-    <state width="1237" height="237" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361397776" />
+    <state width="1237" height="101" key="GridCell.Tab.0.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605434479680" />
     <state width="845" height="300" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="1057" height="213" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605258991119" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1605352490180">
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1605361952772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1617" height="281" key="GridCell.Tab.1.bottom/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474485" />
     <state width="983" height="320" key="GridCell.Tab.1.bottom/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018584" />
     <state width="1617" height="160" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188356" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605352490180" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361952772" />
     <state width="845" height="300" key="GridCell.Tab.1.bottom/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231018" />
     <state width="1057" height="213" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605258991123" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1605352490179">
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1605361952772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1617" height="281" key="GridCell.Tab.1.center/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474485" />
     <state width="983" height="320" key="GridCell.Tab.1.center/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018584" />
     <state width="1617" height="160" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188356" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605352490179" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361952772" />
     <state width="845" height="300" key="GridCell.Tab.1.center/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231018" />
     <state width="1057" height="213" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1605258991119" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1605352490179">
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1605361952772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1617" height="281" key="GridCell.Tab.1.left/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474485" />
     <state width="983" height="320" key="GridCell.Tab.1.left/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018584" />
     <state width="1617" height="160" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188355" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605352490179" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361952772" />
     <state width="845" height="300" key="GridCell.Tab.1.left/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231017" />
     <state width="1057" height="213" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1605258991119" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1605352490180">
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1605361952772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1617" height="281" key="GridCell.Tab.1.right/0.0.1280.680/-979.-1080.1920.1040@-979.-1080.1920.1040" timestamp="1604937474485" />
     <state width="983" height="320" key="GridCell.Tab.1.right/0.0.1280.680/-979.-2160.2560.1400@0.0.1280.680" timestamp="1604675018584" />
     <state width="1617" height="160" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605095188356" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605352490180" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680/0.-1080.1920.1040@0.0.1280.680" timestamp="1605361952772" />
     <state width="845" height="300" key="GridCell.Tab.1.right/0.0.1280.680/1920.0.1920.1040/-944.-2160.2560.1400@0.0.1280.680" timestamp="1603899231018" />
     <state width="1057" height="213" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1605258991123" />
     <state width="1057" height="213" key="GridCell.Tab.2.bottom" timestamp="1605173130052">
@@ -421,5 +412,13 @@
         <PinnedItemInfo typeName="com.mybackend.seat.application.domain.entities.VehiclesEntity" fieldName="specificDescription" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/seat$com_mybackend_seat_utils_DiscountUtilTests_in_my_backend.ic" NAME="com.mybackend.seat.utils.DiscountUtilTests in my-backend Coverage Results" MODIFIED="1605434285147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.mybackend.seat.utils.DiscountUtilTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/seat$VehiclesControllerTest.ic" NAME="VehiclesControllerTest Coverage Results" MODIFIED="1605434081727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.mybackend.seat.application.controllers.*</FILTER>
+    </SUITE>
   </component>
 </project>

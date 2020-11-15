@@ -55,7 +55,7 @@ public class VehiclesControllerTest {
     }
 
     @Test
-    void ShouldReturnOkWhenVisitOneVehicle() throws Exception{
+    void ShouldReturnIdWhenVisitOneVehicle() throws Exception{
         MockHttpServletResponse response = mvc.perform(get("/api/vehicles/1")
                 .accept(MediaType.APPLICATION_JSON))
                 .andReturn().getResponse();

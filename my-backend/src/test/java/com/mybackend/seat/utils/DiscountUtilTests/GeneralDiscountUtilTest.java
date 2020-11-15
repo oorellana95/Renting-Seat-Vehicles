@@ -59,4 +59,9 @@ public class GeneralDiscountUtilTest {
         assertEquals(100,discountUtil.getFinalPrice(200, 100));
     }
 
+    @Test
+    public void GetFinalPriceShouldReturn0() throws Exception {
+        assertEquals(0,discountUtil.getFinalPrice(100, 200));
+    }
+
 }

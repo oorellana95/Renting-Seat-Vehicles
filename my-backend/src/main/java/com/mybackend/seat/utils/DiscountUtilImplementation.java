@@ -127,6 +127,7 @@ public class DiscountUtilImplementation implements DiscountUtil {
 
     @Override
     public double getFinalPrice(double defaultPrice, double discounts){
-        return  Math.round((defaultPrice-discounts)*100.0)/100.0;
+        if (discounts > defaultPrice) return 0.0;
+        else return Math.round((defaultPrice-discounts)*100.0)/100.0;
     }
 }
