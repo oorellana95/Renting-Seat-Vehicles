@@ -3503,7 +3503,7 @@ Created using IcoMoon - icomoon.io
 
 .navbar .navbar-nav .nav-link:not(.btn) {
   text-transform: uppercase;
-  font-size: 0.7142em;
+  font-size: 0.9em;
   padding: 0.5rem 0.7rem;
   line-height: 1.625rem;
 }
@@ -3551,7 +3551,7 @@ Created using IcoMoon - icomoon.io
 
 .navbar .navbar-brand {
   text-transform: uppercase;
-  font-size: 0.8571em;
+  font-size: 1em;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   line-height: 1.625rem;
