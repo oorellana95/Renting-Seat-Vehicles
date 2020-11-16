@@ -19,6 +19,7 @@ import About from "pages/About.js";
 import Contact from "pages/Contact.js";
 import DetailsVehicle from "pages/DetailsVehicle.js";
 import ThankYou from "pages/ThankYou";
+import PikachuEmail from "pages/PikachuEmail";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -48,6 +49,10 @@ ReactDOM.render(
             <Route
               path="/thankyou"
               render={(props) => <ThankYou {...props} />}
+            />
+            <Route
+              path="/pikaemail"
+              render={(props) => <PikachuEmail {...props} />}
             />
             <Redirect to="/home" />
             <Redirect from="/" to="/home" />

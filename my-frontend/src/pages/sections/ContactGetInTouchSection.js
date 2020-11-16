@@ -1,8 +1,9 @@
 
 import React from 'react'
 import ItemContact from 'components/ItemContact';
-import { Container, Row, Col, FormGroup, Form, Input, Button} from "reactstrap";
-import { faBuilding, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { Container, Row, Col, FormGroup, Form, Input} from "reactstrap";
+import { faBuilding, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function GetInTouchSection() {
 
@@ -64,7 +65,10 @@ function GetInTouchSection() {
                                     </Col>
                                 </Row>
                                 <FormGroup className="form-group mt-3">
-                                    <Button type="submit" className="button button-contactForm boxed-btn">Send</Button>
+                                    <Link to={"/pikaemail"}>
+                                        <span type="button"  className="button button-contactForm boxed-btn">Send</span>
+                                    </Link>
+                                    {/* <Button type="submit" className="button button-contactForm boxed-btn">Send</Button> */}
                                 </FormGroup>
                             </Form>
                         </Col>
